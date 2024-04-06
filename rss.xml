@@ -15,12 +15,7 @@
             <description><![CDATA[ &lt;h1 id=&#34;Hgame-FINAL-WP&#34;&gt;&lt;a href=&#34;#Hgame-FINAL-WP&#34; class=&#34;headerlink&#34; title=&#34;Hgame FINAL WP&#34;&gt;&lt;/a&gt;Hgame FINAL WP&lt;/h1&gt;&lt;h3 id=&#34;author-Fc04dB&#34;&gt;&lt;a href=&#34;#author-Fc04dB&#34; class=&#34;headerlink&#34; title=&#34;author: Fc04dB&#34;&gt;&lt;/a&gt;author: Fc04dB&lt;/h3&gt;&lt;h4 id=&#34;1-看不见的字&#34;&gt;&lt;a href=&#34;#1-看不见的字&#34; class=&#34;headerlink&#34; title=&#34;1.看不见的字&#34;&gt;&lt;/a&gt;1.看不见的字&lt;/h4&gt;&lt;p&gt;题目提示npm install zero-width-lib ,网上搜了一下,是零宽字符隐藏文本加密（npm没有研究，最后发现也没用到），翻了很多文章，找到一个在线解密的网站:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;https://yuanfux.github.io/zero-width-web/
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img  
-                     lazyload
-                     src=&#34;/images/loading.svg&#34;
-                     data-src=&#34;/image.png&#34;
-                     
-                &gt;&lt;/p&gt;
+&lt;p&gt;&lt;img lazyload src=&#34;/images/loading.svg&#34; data-src=&#34;/Hgame-FINAL-WP/image-5.png&#34; alt=&#34;alt text&#34;&gt;&lt;/p&gt;
 &lt;p&gt;直接得到flag&lt;/p&gt;
 &lt;p&gt;顺便贴一张其他人写的脚本&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;import * as z from &amp;#39;zero-width-lib&amp;#39;;
@@ -39,35 +34,15 @@ const decoded = z.decode(encodedString);
 console.log(decoded);
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h4 id=&#34;2-逮虾户&#34;&gt;&lt;a href=&#34;#2-逮虾户&#34; class=&#34;headerlink&#34; title=&#34;2.逮虾户&#34;&gt;&lt;/a&gt;2.逮虾户&lt;/h4&gt;&lt;p&gt;附件一个dmg文件是moc系统磁盘文件，7z直接提取，一个需要密码的压缩包，一个png文件，密码应该就在png文件里，然后用binwalk,foremost,stegsolve,zsteg，好多工具都找不到隐写内容，后来在学长的提示下是piet编程语言，然后下载npiet执行文件得到密码&lt;/p&gt;
-&lt;p&gt;&lt;img  
-                     lazyload
-                     src=&#34;/images/loading.svg&#34;
-                     data-src=&#34;/image-1.png&#34;
-                      alt=&#34;alt text&#34;
-                &gt;&lt;/p&gt;
+&lt;p&gt;&lt;img lazyload src=&#34;/images/loading.svg&#34; data-src=&#34;/Hgame-FINAL-WP/image-1.png&#34; alt=&#34;alt text&#34;&gt;&lt;/p&gt;
 &lt;p&gt;打开7z文件，是一个逮虾户歌曲，尝试MP3隐写的解题方法，一无所获，再次请教学长，&lt;br&gt;信息在歌词里，想着把歌词提取出来，最后利用elisa播放器找到passward&lt;/p&gt;
-&lt;p&gt;&lt;img  
-                     lazyload
-                     src=&#34;/images/loading.svg&#34;
-                     data-src=&#34;/image-2.png&#34;
-                      alt=&#34;alt text&#34;
-                &gt;&lt;/p&gt;
+&lt;p&gt;&lt;img lazyload src=&#34;/images/loading.svg&#34; data-src=&#34;/Hgame-FINAL-WP/image-2.png&#34; alt=&#34;alt text&#34;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;q:UVmoa,Qo^Dp.D9e#wsFUm059mhNT
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;诶？长得也不像flag，然后学长提醒有一个zip文件没找到，用binwalk处理那个MP3文件，提取到zip文件&lt;/p&gt;
-&lt;p&gt;&lt;img  
-                     lazyload
-                     src=&#34;/images/loading.svg&#34;
-                     data-src=&#34;/image-3.png&#34;
-                      alt=&#34;alt text&#34;
-                &gt;&lt;/p&gt;
+&lt;p&gt;&lt;img lazyload src=&#34;/images/loading.svg&#34; data-src=&#34;/Hgame-FINAL-WP/image-3.png&#34; alt=&#34;alt text&#34;&gt;&lt;/p&gt;
 &lt;p&gt;打开之后是一个jdvu文件，记事本打不开，百度，要下载windjview，然后就可以看到flag&lt;/p&gt;
-&lt;p&gt;&lt;img  
-                     lazyload
-                     src=&#34;/images/loading.svg&#34;
-                     data-src=&#34;/image-4.png&#34;
-                      alt=&#34;alt text&#34;
-                &gt;&lt;/p&gt;
+&lt;p&gt;&lt;img lazyload src=&#34;/images/loading.svg&#34; data-src=&#34;/Hgame-FINAL-WP/image-4.png&#34; alt=&#34;alt text&#34;&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Hgame&amp;#123;d3j45_i_kn0w&amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
  ]]></description>
