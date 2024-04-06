@@ -20,7 +20,8 @@
                      src=&#34;/images/loading.svg&#34;
                      data-src=&#34;/image.png&#34;
                      
-                &gt;&lt;br&gt;直接得到flag&lt;/p&gt;
+                &gt;&lt;/p&gt;
+&lt;p&gt;直接得到flag&lt;/p&gt;
 &lt;p&gt;顺便贴一张其他人写的脚本&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;import * as z from &amp;#39;zero-width-lib&amp;#39;;
 // 这是要解密的字符串，包含零宽度字符
@@ -69,7 +70,6 @@ console.log(decoded);
                 &gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Hgame&amp;#123;d3j45_i_kn0w&amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;第二个血，感谢学长的提示！！！&lt;/p&gt;
  ]]></description>
         </item>
         <item>
