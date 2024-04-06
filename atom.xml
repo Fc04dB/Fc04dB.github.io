@@ -1,100 +1,72 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://example.com</id>
-    <title>Hexo</title>
-    <link href="http://example.com" />
-    <updated>2024-04-06T04:07:37.919Z</updated>
-    <entry>
-        <id>http://example.com/2024/04/06/Hgame-FINAL-WP/</id>
-        <title></title>
-        <link rel="alternate" href="http://example.com/2024/04/06/Hgame-FINAL-WP/"/>
-        <content type="html">&lt;h1 id=&#34;Hgame-FINAL-WP&#34;&gt;&lt;a href=&#34;#Hgame-FINAL-WP&#34; class=&#34;headerlink&#34; title=&#34;Hgame FINAL WP&#34;&gt;&lt;/a&gt;Hgame FINAL WP&lt;/h1&gt;&lt;h3 id=&#34;author-Fc04dB&#34;&gt;&lt;a href=&#34;#author-Fc04dB&#34; class=&#34;headerlink&#34; title=&#34;author: Fc04dB&#34;&gt;&lt;/a&gt;author: Fc04dB&lt;/h3&gt;&lt;h4 id=&#34;1-看不见的字&#34;&gt;&lt;a href=&#34;#1-看不见的字&#34; class=&#34;headerlink&#34; title=&#34;1.看不见的字&#34;&gt;&lt;/a&gt;1.看不见的字&lt;/h4&gt;&lt;p&gt;题目提示npm install zero-width-lib ,网上搜了一下,是零宽字符隐藏文本加密（npm没有研究，最后发现也没用到），翻了很多文章，找到一个在线解密的网站:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://yuanfux.github.io/zero-width-web/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img  
-                     lazyload
-                     src=&#34;/images/loading.svg&#34;
-                     data-src=&#34;/image.png&#34;
-                     
-                &gt;&lt;br&gt;直接得到flag&lt;/p&gt;
-&lt;p&gt;顺便贴一张其他人写的脚本&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;import * as z from &amp;#39;zero-width-lib&amp;#39;;
-// 这是要解密的字符串，包含零宽度字符
-const encodedString = 
-&amp;#39;h\uFEFF\u200E\uFEFF\u200B\uFEFF\u200E\u200D\u200B\u200D\uFEFF\u200C\u200B\uFEFF\
-u200F\uFEFF\u200B\uFEFF\u200E\u200F\u200B\uFEFF\uFEFF\u200D\u200B\uFEFF\u200D\uFE
-FF\u200B\u200C\u200E\u200F\u200B\uFEFF\u200F\u200D\u200B\u200D\uFEFF\uFEFF\u200B\
-u200F\uFEFF\u200D\u200B\uFEFF\u200F\uFEFF\u200B\uFEFF\u200E\u200F\u200B\u200D\uFE
-FF\u200E\u200B\uFEFF\u200E\uFEFF\u200B\uFEFF\u200E\u200D\u200B\u200D\uFEFF\u200C\
-u200B\uFEFF\u200F\uFEFF\u200B\uFEFF\u200E\u200F\u200B\u200D\uFEFF\u200E\u200B\uFE
-FF\u200E\u200C\u200B\u200F\uFEFF\uFEFF\u200B\uFEFF\u200C\u200E\u200B\u200C\u200E\
-u200C\u200B\uFEFF\u200F\u200D\u200B\u200F\u200E\u200E\u200Eello&amp;#39;;
-// 使用zero-width-lib的decode方法来解密字符串
-const decoded = z.decode(encodedString);
-console.log(decoded);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;2-逮虾户&#34;&gt;&lt;a href=&#34;#2-逮虾户&#34; class=&#34;headerlink&#34; title=&#34;2.逮虾户&#34;&gt;&lt;/a&gt;2.逮虾户&lt;/h4&gt;&lt;p&gt;附件一个dmg文件是moc系统磁盘文件，7z直接提取，一个需要密码的压缩包，一个png文件，密码应该就在png文件里，然后用binwalk,foremost,stegsolve,zsteg，好多工具都找不到隐写内容，后来在学长的提示下是piet编程语言，然后下载npiet执行文件得到密码&lt;/p&gt;
-&lt;p&gt;&lt;img  
-                     lazyload
-                     src=&#34;/images/loading.svg&#34;
-                     data-src=&#34;/image-1.png&#34;
-                      alt=&#34;alt text&#34;
-                &gt;&lt;/p&gt;
-&lt;p&gt;打开7z文件，是一个逮虾户歌曲，尝试MP3隐写的解题方法，一无所获，再次请教学长，&lt;br&gt;信息在歌词里，想着把歌词提取出来，最后利用elisa播放器找到passward&lt;/p&gt;
-&lt;p&gt;&lt;img  
-                     lazyload
-                     src=&#34;/images/loading.svg&#34;
-                     data-src=&#34;/image-2.png&#34;
-                      alt=&#34;alt text&#34;
-                &gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;q:UVmoa,Qo^Dp.D9e#wsFUm059mhNT
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;诶？长得也不像flag，然后学长提醒有一个zip文件没找到，用binwalk处理那个MP3文件，提取到zip文件&lt;/p&gt;
-&lt;p&gt;&lt;img  
-                     lazyload
-                     src=&#34;/images/loading.svg&#34;
-                     data-src=&#34;/image-3.png&#34;
-                      alt=&#34;alt text&#34;
-                &gt;&lt;/p&gt;
-&lt;p&gt;打开之后是一个jdvu文件，记事本打不开，百度，要下载windjview，然后就可以看到flag&lt;/p&gt;
-&lt;p&gt;&lt;img  
-                     lazyload
-                     src=&#34;/images/loading.svg&#34;
-                     data-src=&#34;/image-4.png&#34;
-                      alt=&#34;alt text&#34;
-                &gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Hgame&amp;#123;d3j45_i_kn0w&amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;第二个血，感谢学长的提示！！！&lt;/p&gt;
-</content>
-        <updated>2024-04-06T04:07:37.919Z</updated>
-    </entry>
-    <entry>
-        <id>http://example.com/2024/04/03/My-New-Post/</id>
-        <title>My New Post</title>
-        <link rel="alternate" href="http://example.com/2024/04/03/My-New-Post/"/>
-        <content type="html"></content>
-        <updated>2024-04-03T12:29:21.000Z</updated>
-    </entry>
-    <entry>
-        <id>http://example.com/2024/04/03/hello-world/</id>
-        <title>Hello World</title>
-        <link rel="alternate" href="http://example.com/2024/04/03/hello-world/"/>
-        <content type="html">&lt;p&gt;Welcome to &lt;a class=&#34;link&#34;   href=&#34;https://hexo.io/&#34; &gt;Hexo &lt;i class=&#34;fa-regular fa-arrow-up-right-from-square fa-sm&#34;&gt;&lt;/i&gt;&lt;/a&gt;! This is your very first post. Check &lt;a class=&#34;link&#34;   href=&#34;https://hexo.io/docs/&#34; &gt;documentation &lt;i class=&#34;fa-regular fa-arrow-up-right-from-square fa-sm&#34;&gt;&lt;/i&gt;&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a class=&#34;link&#34;   href=&#34;https://hexo.io/docs/troubleshooting.html&#34; &gt;troubleshooting &lt;i class=&#34;fa-regular fa-arrow-up-right-from-square fa-sm&#34;&gt;&lt;/i&gt;&lt;/a&gt; or you can ask me on &lt;a class=&#34;link&#34;   href=&#34;https://github.com/hexojs/hexo/issues&#34; &gt;GitHub &lt;i class=&#34;fa-regular fa-arrow-up-right-from-square fa-sm&#34;&gt;&lt;/i&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
-&lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
-&lt;div class=&#34;highlight-container&#34; data-rel=&#34;Bash&#34;&gt;&lt;figure class=&#34;iseeu highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;More info: &lt;a class=&#34;link&#34;   href=&#34;https://hexo.io/docs/writing.html&#34; &gt;Writing &lt;i class=&#34;fa-regular fa-arrow-up-right-from-square fa-sm&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
-&lt;div class=&#34;highlight-container&#34; data-rel=&#34;Bash&#34;&gt;&lt;figure class=&#34;iseeu highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;More info: &lt;a class=&#34;link&#34;   href=&#34;https://hexo.io/docs/server.html&#34; &gt;Server &lt;i class=&#34;fa-regular fa-arrow-up-right-from-square fa-sm&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
-&lt;div class=&#34;highlight-container&#34; data-rel=&#34;Bash&#34;&gt;&lt;figure class=&#34;iseeu highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;More info: &lt;a class=&#34;link&#34;   href=&#34;https://hexo.io/docs/generating.html&#34; &gt;Generating &lt;i class=&#34;fa-regular fa-arrow-up-right-from-square fa-sm&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
-&lt;div class=&#34;highlight-container&#34; data-rel=&#34;Bash&#34;&gt;&lt;figure class=&#34;iseeu highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;
-&lt;p&gt;More info: &lt;a class=&#34;link&#34;   href=&#34;https://hexo.io/docs/one-command-deployment.html&#34; &gt;Deployment &lt;i class=&#34;fa-regular fa-arrow-up-right-from-square fa-sm&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
-        <updated>2024-04-03T12:20:59.897Z</updated>
-    </entry>
+  <title>Hexo</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2024-04-06T04:15:53.954Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2024/04/06/Hgame-FINAL-WP/"/>
+    <id>http://example.com/2024/04/06/Hgame-FINAL-WP/</id>
+    <published>2024-04-06T04:07:37.919Z</published>
+    <updated>2024-04-06T04:15:53.954Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Hgame-FINAL-WP"><a href="#Hgame-FINAL-WP" class="headerlink" title="Hgame FINAL WP"></a>Hgame FINAL WP</h1><h3 id="author-Fc04dB"><a href="#author-Fc04dB" class="headerlink" title="author: Fc04dB"></a>author: Fc04dB</h3><h4 id="1-看不见的字"><a href="#1-看不见的字" class="headerlink" title="1.看不见的字"></a>1.看不见的字</h4><p>题目提示npm install zero-width-lib ,网上搜了一下,是零宽字符隐藏文本加密（npm没有研究，最后发现也没用到），翻了很多文章，找到一个在线解密的网站:</p><pre><code>https://yuanfux.github.io/zero-width-web/</code></pre><p><img                       lazyload                     src="/images/loading.svg"                     data-src="/image.png"                                     ><br>直接得到flag</p><p>顺便贴一张其他人写的脚本</p><pre><code>import * as z from &#39;zero-width-lib&#39;;// 这是要解密的字符串，包含零宽度字符const encodedString = &#39;h\uFEFF\u200E\uFEFF\u200B\uFEFF\u200E\u200D\u200B\u200D\uFEFF\u200C\u200B\uFEFF\u200F\uFEFF\u200B\uFEFF\u200E\u200F\u200B\uFEFF\uFEFF\u200D\u200B\uFEFF\u200D\uFEFF\u200B\u200C\u200E\u200F\u200B\uFEFF\u200F\u200D\u200B\u200D\uFEFF\uFEFF\u200B\u200F\uFEFF\u200D\u200B\uFEFF\u200F\uFEFF\u200B\uFEFF\u200E\u200F\u200B\u200D\uFEFF\u200E\u200B\uFEFF\u200E\uFEFF\u200B\uFEFF\u200E\u200D\u200B\u200D\uFEFF\u200C\u200B\uFEFF\u200F\uFEFF\u200B\uFEFF\u200E\u200F\u200B\u200D\uFEFF\u200E\u200B\uFEFF\u200E\u200C\u200B\u200F\uFEFF\uFEFF\u200B\uFEFF\u200C\u200E\u200B\u200C\u200E\u200C\u200B\uFEFF\u200F\u200D\u200B\u200F\u200E\u200E\u200Eello&#39;;// 使用zero-width-lib的decode方法来解密字符串const decoded = z.decode(encodedString);console.log(decoded);</code></pre><h4 id="2-逮虾户"><a href="#2-逮虾户" class="headerlink" title="2.逮虾户"></a>2.逮虾户</h4><p>附件一个dmg文件是moc系统磁盘文件，7z直接提取，一个需要密码的压缩包，一个png文件，密码应该就在png文件里，然后用binwalk,foremost,stegsolve,zsteg，好多工具都找不到隐写内容，后来在学长的提示下是piet编程语言，然后下载npiet执行文件得到密码</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="/image-1.png"                      alt="alt text"                ></p><p>打开7z文件，是一个逮虾户歌曲，尝试MP3隐写的解题方法，一无所获，再次请教学长，<br>信息在歌词里，想着把歌词提取出来，最后利用elisa播放器找到passward</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="/image-2.png"                      alt="alt text"                ></p><pre><code>q:UVmoa,Qo^Dp.D9e#wsFUm059mhNT</code></pre><p>诶？长得也不像flag，然后学长提醒有一个zip文件没找到，用binwalk处理那个MP3文件，提取到zip文件</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="/image-3.png"                      alt="alt text"                ></p><p>打开之后是一个jdvu文件，记事本打不开，百度，要下载windjview，然后就可以看到flag</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="/image-4.png"                      alt="alt text"                ></p><pre><code>Hgame&#123;d3j45_i_kn0w&#125;</code></pre><p>第二个血，感谢学长的提示！！！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Hgame-FINAL-WP&quot;&gt;&lt;a href=&quot;#Hgame-FINAL-WP&quot; class=&quot;headerlink&quot; title=&quot;Hgame FINAL WP&quot;&gt;&lt;/a&gt;Hgame FINAL WP&lt;/h1&gt;&lt;h3 id=&quot;author-Fc04dB&quot;&gt;&lt;a</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>My New Post</title>
+    <link href="http://example.com/2024/04/03/My-New-Post/"/>
+    <id>http://example.com/2024/04/03/My-New-Post/</id>
+    <published>2024-04-03T12:29:21.000Z</published>
+    <updated>2024-04-03T12:29:21.580Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2024/04/03/hello-world/"/>
+    <id>http://example.com/2024/04/03/hello-world/</id>
+    <published>2024-04-03T12:20:59.897Z</published>
+    <updated>2024-04-03T12:09:47.210Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p><h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start">#</a> Quick Start</h2><h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post">#</a> Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div><p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server">#</a> Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div><p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files">#</a> Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div><p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites">#</a> Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div><p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a class=&quot;link&quot;   href=&quot;https://hexo.io/&quot; &gt;Hexo &lt;i class=&quot;fa-regular fa-arrow-up-right-from-square fa-sm&quot;&gt;&lt;/i&gt;&lt;/a&gt;! This is yo</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
 </feed>
