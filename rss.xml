@@ -16,7 +16,7 @@
 &lt;h2 id=&#34;什么是序列化和反序列化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#什么是序列化和反序列化&#34;&gt;#&lt;/a&gt; 什么是序列化和反序列化&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;serialize&lt;/strong&gt; 将对象格式化成有序的字符串&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;unserialize&lt;/strong&gt; 将字符串还原成原来的对象&lt;/p&gt;
-&lt;h3 id=&#34;serialized的特征&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#serialized的特征&#34;&gt;#&lt;/a&gt; serialized 的特征&lt;/h3&gt;
+&lt;h3 id=&#34;serialize的特征&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#serialize的特征&#34;&gt;#&lt;/a&gt; serialize 的特征&lt;/h3&gt;
 &lt;p&gt;常见的序列化格式有&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;二进制格式&lt;/p&gt;
