@@ -30,8 +30,12 @@
 <meta property="og:image" content="https://s2.loli.net/2024/04/16/4wdCj32AFk1QaiZ.png">
 <meta property="og:image" content="https://s2.loli.net/2024/04/16/tga7QNjrkfeCIOn.png">
 <meta property="og:image" content="c:/Users/20957/AppData/Roaming/Typora/typora-user-images/image-20240416113826761.png">
+<meta property="og:image" content="https://s2.loli.net/2024/04/16/lkoNY3MnVQPK4Hy.jpg">
+<meta property="og:image" content="https://s2.loli.net/2024/04/16/XQzpv3Wh8VP1owE.jpg">
+<meta property="og:image" content="https://s2.loli.net/2024/04/16/Hy4g3sq6nkEbLmQ.png">
+<meta property="og:image" content="https://img2.imgtp.com/2024/04/17/yZoqipkB.png">
 <meta property="article:published_time" content="2024-04-16T01:58:59.000Z">
-<meta property="article:modified_time" content="2024-04-16T03:57:28.535Z">
+<meta property="article:modified_time" content="2024-04-17T04:30:39.200Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s2.loli.net/2024/04/16/7OWankz9bgmRxvZ.png">
@@ -421,8 +425,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-04-16 11:57:28</span>
-            <span class="mobile">2024-04-16 11:57:28</span>
+            <span class="desktop">2024-04-17 12:30:39</span>
+            <span class="mobile">2024-04-17 12:30:39</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -563,6 +567,105 @@
 <h3 id="分支的指令"><a class="markdownIt-Anchor" href="#分支的指令">#</a> 分支的指令</h3>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># 列出所有本地分支</span><br><span class="line">git branch</span><br><span class="line"></span><br><span class="line"># 列出所有远程分支</span><br><span class="line">git branch -r</span><br><span class="line"></span><br><span class="line"># 新建一个分支，但依然停留在当前分支</span><br><span class="line">git branch [branch-name]</span><br><span class="line"></span><br><span class="line"># 新建一个分支，并切换到该分支</span><br><span class="line">git checkout -b [branch]</span><br><span class="line"></span><br><span class="line"># 合并指定分支到当前分支</span><br><span class="line">$ git merge [branch]</span><br><span class="line"></span><br><span class="line"># 删除分支</span><br><span class="line">$ git branch -d [branch-name]</span><br><span class="line"></span><br><span class="line"># 删除远程分支</span><br><span class="line">$ git push origin --delete [branch-name]</span><br><span class="line">$ git branch -dr [remote/branch]</span><br></pre></td></tr></table></figure></div>
 <h1 id="docker"><a class="markdownIt-Anchor" href="#docker">#</a> Docker</h1>
+<p><strong>Docker</strong> 是一个开源的应用容器引擎，基于 Go 语言，并遵从 Apache2.0 协议开源。它可以让开发者将应用程序及其依赖包打包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。<strong>Docker</strong> 可用于开发应用、交付应用和运行应用等场景</p>
+<p>容器技术的起源可以追溯到解决重复搭建环境、浪费时间和效率的问题。在没有容器技术之前，虚拟机是一种常见的解决方案，但它们存在资源占用大、启动时间慢等问题。与虚拟机不同，<strong>Docker</strong> 使用容器隔离应用程序的运行时环境，但容器之间可以共享同一个操作系统。这使得容器更轻量且占用更少资源，且启动速度快。因此，<strong>Docker</strong> 成为了打包服务栈的高效方式</p>
+<p>Docker 的主要用途，目前有三大类。</p>
+<p>**（1）提供一次性的环境。** 比如，本地测试他人的软件、持续集成的时候提供单元测试和构建的环境。</p>
+<p>**（2）提供弹性的云服务。** 因为 Docker 容器可以随开随关，很适合动态扩容和缩容。</p>
+<p>**（3）组建微服务架构。** 通过多个容器，一台机器可以跑多个服务，因此在本机就可以模拟出微服务架构。</p>
+<h2 id="docker命令"><a class="markdownIt-Anchor" href="#docker命令">#</a> Docker 命令</h2>
+<h3 id="基础命令"><a class="markdownIt-Anchor" href="#基础命令">#</a> 基础命令</h3>
+<p>启动 Docker： <code>systemctl start docker</code></p>
+<p>关闭 Docker：  <code>systemctl stop docker</code></p>
+<p>重启 Docker： <code>systemctl restart docker</code></p>
+<p>docker 设置随服务启动而自启动： <code>systemctl enable docker</code></p>
+<p>查看 Docker 运行状态： <code>systemctl status docker</code></p>
+<p>查看 Docker 版本号信息： <code>docker version &amp; docker info</code></p>
+<p>Docker 帮助命令： <code>docker --help</code></p>
+<h3 id="镜像-容器命令"><a class="markdownIt-Anchor" href="#镜像-容器命令">#</a> 镜像 / 容器命令</h3>
+<p><img lazyload src="/images/loading.svg" data-src="https://s2.loli.net/2024/04/16/lkoNY3MnVQPK4Hy.jpg" alt="533212df4b4d89ffad49622b744f932.jpg"></p>
+<p><strong>镜像</strong></p>
+<p><code>docker search 镜像id或name</code> ：在 Docker Hub（或其他镜像仓库如阿里镜像）仓库中搜索关键字的镜像</p>
+<p><code>docker pull 镜像id或name</code> ：从仓库中下载镜像，若要指定版本，则要在冒号后指定</p>
+<p><code>docker images</code> ：列出已经下载的镜像，查看镜像</p>
+<p><code>docker rmi 镜像id或name</code> ：删除本地镜像</p>
+<p><code>docker rmi -f 镜像id或name</code> : 删除镜像</p>
+<p><code>docker build</code> ：构建镜像</p>
+<p><code>docker save</code> ：将镜像压缩并保存到本地</p>
+<p><code>docker load</code> ：从本地下载镜像</p>
+<p><strong>容器</strong></p>
+<p><code>docker ps</code> ：列出运行中的容器</p>
+<p><code>docker ps -a</code>  ： 查看所有容器，包括未运行</p>
+<p><code>docker run</code> ：启动容器</p>
+<p><code>docker stop 容器id或name</code> ：停止容器</p>
+<p><code>docker kill 容器id</code> ：强制停止容器</p>
+<p><code>docker start 容器id或name</code> ：启动已停止的容器</p>
+<p><code>docker inspect 容器id</code> ：查看容器的所有信息</p>
+<p><code>docker container logs 容器id</code> ：查看容器日志</p>
+<p><code>docker top 容器id</code> ：查看容器里的进程</p>
+<p><code>docker exec -it 容器id /bin/bash</code> ：进入容器</p>
+<p><code>exit</code> ：退出容器</p>
+<p><code>docker rm 容器id或name</code> ：删除已停止的容器</p>
+<p><code>docker rm -f 容器id</code> ：删除正在运行的容器</p>
+<p><code>docker exec -it 容器ID sh </code> : 进入容器</p>
+<h2 id="数据卷"><a class="markdownIt-Anchor" href="#数据卷">#</a> 数据卷</h2>
+<p><strong>数据卷</strong>（volume）是一个虚拟目录，是容器内目录与宿主机目录之间映射的桥梁</p>
+<p>Docker 将运用与运行的环境打包形成容器运行， Docker 容器产生的数据，如果不通过 docker commit 生成新的镜像，使得数据做为镜像的一部分保存下来， 那么当容器删除后，数据自然也就没有了。 为了能保存数据在 Docker 中我们使用卷。|</p>
+<p>卷就是目录或文件，存在于一个或多个容器中，由 Docker 挂载到容器，但卷不属于联合文件系统（Union FileSystem），因此能够绕过联合文件系统提供一些用于持续存储或共享数据的特性:。</p>
+<p>卷的设计目的就是数据的持久化，完全独立于容器的生存周期，因此 Docker 不会在容器删除时删除其挂载的数据卷。</p>
+<p>数据卷的特点:</p>
+<p>1. 数据卷可在容器之间共享或重用数据<br>
+ 2. 卷中的更改可以直接生效<br>
+ 3. 数据卷中的更改不会包含在镜像的更新中<br>
+ 4. 数据卷的生命周期一直持续到没有容器使用它为止</p>
+<p><img lazyload src="/images/loading.svg" data-src="https://s2.loli.net/2024/04/16/XQzpv3Wh8VP1owE.jpg" alt="9adc1f8d4b0224fc8531ae9cc96249a.jpg"></p>
+<p>在宿主机 / 容器中的更改会同步到另一方</p>
+<h3 id="命令"><a class="markdownIt-Anchor" href="#命令">#</a> 命令</h3>
+<p>创建数据卷： <code>docker volume create my-vol</code></p>
+<p>查看所有数据卷： <code>docker volume ls</code></p>
+<p>删除数据卷： <code>docker volume rm</code></p>
+<p>查看某个数据卷的详情： <code>docker volume inspect</code></p>
+<p>清除数据卷： <code>docker volume prune</code></p>
+<h2 id="image文件"><a class="markdownIt-Anchor" href="#image文件">#</a> image 文件</h2>
+<p>**Docker 把应用程序及其依赖，打包在 image 文件里面。** 只有通过这个文件，才能生成 Docker 容器。image 文件可以看作是容器的模板。Docker 根据 image 文件生成容器的实例。同一个 image 文件，可以生成多个同时运行的容器实例。</p>
+<p>image 是二进制文件。实际开发中，一个 image 文件往往通过继承另一个 image 文件，加上一些个性化设置而生成。举例来说，你可以在 Ubuntu 的 image 基础上，往里面加入 Apache 服务器，形成你的 image。</p>
+<p>image 文件是通用的，一台机器的 image 文件拷贝到另一台机器，照样可以使用。一般来说，为了节省时间，我们应该尽量使用别人制作好的 image 文件，而不是自己制作。即使要定制，也应该基于别人的 image 文件进行加工，而不是从零开始制作。</p>
+<p>为了方便共享，image 文件制作完成后，可以上传到网上的仓库。Docker 的官方仓库 <a class="link" target="_blank" rel="noopener" href="https://hub.docker.com/">Docker Hub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 是最重要、最常用的 image 仓库。</p>
+<h2 id="dockerfile"><a class="markdownIt-Anchor" href="#dockerfile">#</a> Dockerfile</h2>
+<p>Dockerfile 是一个用来构建镜像的文本文件，文本内容包含了一条条构建镜像所需的指令和说明。</p>
+<h3 id="定制镜像"><a class="markdownIt-Anchor" href="#定制镜像">#</a> 定制镜像</h3>
+<p>构建镜像：  <code>docker build -t 镜像名 Dockerfile目录（如是当前所在目录，可用‘.’</code></p>
+<p>镜像的定制实际上就是定制每一层所添加的配置、文件。如果我们可以把每一层修改、安装、构建、操作的命令都写入一个脚本，用这个脚本来构建、定制镜像，无法重复的问题、镜像构建透明性的问题、体积的问题就都会解决。这个脚本就是  <code>Dockerfile</code> 。</p>
+<p><code>Dockerfile</code>  是一个文本文件，其内包含了一条条的指令 (Instruction)，每一条指令构建一层，因此每一条指令的内容，就是描述该层应当如何构建。</p>
+<p>以  <code>nginx</code>  镜像为例，这次我们使用  <code>Dockerfile</code>  来定制。</p>
+<p>在一个空白目录中，建立一个文本文件，并命名为  <code>Dockerfile</code> ：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir mynginx</span><br><span class="line">$ cd mynginx</span><br><span class="line">$ touch Dockerfile</span><br></pre></td></tr></table></figure></div>
+<p>其内容为：</p>
+<div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FROM nginx</span><br><span class="line">RUN echo &#x27;&lt;h1&gt;Hello, Docker!&lt;/h1&gt;&#x27; &gt; /usr/share/nginx/html/index.html</span><br></pre></td></tr></table></figure></div>
+<p>这个  <code>Dockerfile</code>  很简单，一共就两行。涉及到了两条指令， <code>FROM</code>  和  <code>RUN</code> 。</p>
+<h4 id="from-指定基础镜像"><a class="markdownIt-Anchor" href="#from-指定基础镜像">#</a> <strong>FROM 指定基础镜像</strong></h4>
+<p>所谓定制镜像，那一定是以一个镜像为基础，在其上进行定制。就像我们之前运行了一个  <code>nginx</code>  镜像的容器，再进行修改一样，基础镜像是必须指定的。而  <code>FROM</code>  就是指定<strong>基础镜像</strong>，因此一个  <code>Dockerfile</code>  中  <code>FROM</code>  是必备的指令，并且必须是第一条指令。</p>
+<p>在  <code>Docker Store</code>  上有非常多的高质量的官方镜像，有可以直接拿来使用的服务类的镜像，如  <code>nginx</code> 、 <code>redis</code> 、 <code>mongo</code> 、 <code>mysql</code> 、 <code>httpd</code> 、 <code>php</code> 、 <code>tomcat</code>  等；也有一些方便开发、构建、运行各种语言应用的镜像，如 <code>node</code> 、 <code>openjdk</code> 、 <code>python</code> 、 <code>ruby</code> 、 <code>golang</code>  等。可以在其中寻找一个最符合我们最终目标的镜像为基础镜像进行定制。</p>
+<p>如果没有找到对应服务的镜像，官方镜像中还提供了一些更为基础的操作系统镜像，如 <code>ubuntu</code> 、 <code>debian</code> 、 <code>centos</code> 、 <code>fedora</code> 、 <code>alpine</code>  等，这些操作系统的软件库为我们提供了更广阔的扩展空间。</p>
+<p>除了选择现有镜像为基础镜像外， <code>Docker</code>  还存在一个特殊的镜像，名为  <code>scratch</code> 。这个镜像是虚拟的概念，并不实际存在，它表示一个空白的镜像。</p>
+<div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FROM scratch</span><br><span class="line">...</span><br></pre></td></tr></table></figure></div>
+<blockquote>
+<p>如果你以  <code>scratch</code>  为基础镜像的话，意味着你不以任何镜像为基础，接下来所写的指令将作为镜像第一层开始存在。</p>
+</blockquote>
+<p>不以任何系统为基础，直接将可执行文件复制进镜像的做法并不罕见，比如 <code>swarm</code> 、 <code>coreos/etcd</code> 。对于 Linux 下静态编译的程序来说，并不需要有操作系统提供运行时支持，所需的一切库都已经在可执行文件里了，因此直接  <code>FROM scratch</code>  会让镜像体积更加小巧。使用 Go 语言开发的应用很多会使用这种方式来制作镜像，这也是为什么有人认为  <code>Go</code>  是特别适合容器微服务架构的语言的原因之一。</p>
+<h4 id="run-执行命令"><a class="markdownIt-Anchor" href="#run-执行命令">#</a> <strong>RUN 执行命令</strong></h4>
+<p><code>RUN</code>  指令是用来执行命令行命令的。由于命令行的强大能力， <code>RUN</code>  指令在定制镜像时是最常用的指令之一。其格式有两种：</p>
+<ul>
+<li>*<strong>shell* 格式： <code>RUN &lt;命令&gt;</code> ，就像直接在命令行中输入的命令一样。刚才写的  <code>Dockerfile</code>  中的  <code>RUN</code>  指令就是这种格式。</strong></li>
+</ul>
+<div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RUN echo &#x27;&lt;h1&gt;Hello, Docker!&lt;/h1&gt;&#x27; &gt; /usr/share/nginx/html/index.html</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>*<strong>exec* 格式： <code>RUN [&quot;可执行文件&quot;, &quot;参数1&quot;, &quot;参数2&quot;]</code> ，这更像是函数调用中的格式。</strong></li>
+</ul>
+<h4 id="其他指令"><a class="markdownIt-Anchor" href="#其他指令">#</a> <strong>其他指令</strong>：</h4>
+<p><img lazyload src="/images/loading.svg" data-src="https://s2.loli.net/2024/04/16/Hy4g3sq6nkEbLmQ.png" alt="image.png"></p>
+<h2 id="docker全流程"><a class="markdownIt-Anchor" href="#docker全流程">#</a> Docker 全流程</h2>
+<p><img lazyload src="/images/loading.svg" data-src="https://img2.imgtp.com/2024/04/17/yZoqipkB.png" alt="20200927104919216.png"></p>
 
         </div>
 
@@ -577,7 +680,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-04-16 11:57:28
+                    :</strong> 2024-04-17 12:30:39
             </li>
         
         <li>
@@ -677,7 +780,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">Git&amp;Docker</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#git"><span class="nav-text"> Git</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6"><span class="nav-text"> 版本控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D"><span class="nav-text"> 介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B1%BB"><span class="nav-text"> 分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git%E5%92%8Csvn%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text"> Git 和 SVN 的区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E7%90%86%E8%AE%BA"><span class="nav-text"> Git 理论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%9F%9F"><span class="nav-text"> 工作区域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="nav-text"> 工作流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="nav-text"> Git 文件操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E5%91%BD%E4%BB%A4"><span class="nav-text"> Git 命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E5%88%86%E6%94%AF"><span class="nav-text"> Git 分支</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%94%AF%E7%9A%84%E6%8C%87%E4%BB%A4"><span class="nav-text"> 分支的指令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#docker"><span class="nav-text"> Docker</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#git"><span class="nav-text"> Git</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6"><span class="nav-text"> 版本控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D"><span class="nav-text"> 介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B1%BB"><span class="nav-text"> 分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git%E5%92%8Csvn%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text"> Git 和 SVN 的区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E7%90%86%E8%AE%BA"><span class="nav-text"> Git 理论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%9F%9F"><span class="nav-text"> 工作区域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="nav-text"> 工作流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="nav-text"> Git 文件操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E5%91%BD%E4%BB%A4"><span class="nav-text"> Git 命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git%E5%88%86%E6%94%AF"><span class="nav-text"> Git 分支</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%94%AF%E7%9A%84%E6%8C%87%E4%BB%A4"><span class="nav-text"> 分支的指令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#docker"><span class="nav-text"> Docker</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#docker%E5%91%BD%E4%BB%A4"><span class="nav-text"> Docker 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4"><span class="nav-text"> 基础命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%9C%E5%83%8F-%E5%AE%B9%E5%99%A8%E5%91%BD%E4%BB%A4"><span class="nav-text"> 镜像 &#x2F; 容器命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%8D%B7"><span class="nav-text"> 数据卷</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4"><span class="nav-text"> 命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#image%E6%96%87%E4%BB%B6"><span class="nav-text"> image 文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dockerfile"><span class="nav-text"> Dockerfile</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E5%88%B6%E9%95%9C%E5%83%8F"><span class="nav-text"> 定制镜像</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#docker%E5%85%A8%E6%B5%81%E7%A8%8B"><span class="nav-text"> Docker 全流程</span></a></li></ol></li></ol>
 
     </div>
 </div>
