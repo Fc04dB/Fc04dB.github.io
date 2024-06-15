@@ -18,12 +18,12 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="WAFWAF（Web Application Firewall，网页应用防火墙）是一种专门设计用于保护Web应用程序的安全设备或软件，旨在通过监控、过滤和分析HTTP&#x2F;HTTPS流量，防止常见的Web攻击，如SQL注入、跨站脚本（XSS）攻击和跨站请求伪造（CSRF）等 WAF一般部署在Web服务器之前，用来保护Web应用 WAF与传统安全设备传统安全设备特点：  IPS：针对蠕虫、网络">
+        <meta name="description" content="# WAF WAF （ Web Application Firewall ，网页应用防火墙）是一种专门设计用于保护 Web 应用程序的安全设备或软件，旨在通过监控、过滤和分析 HTTP&#x2F;HTTPS 流量，防止常见的 Web 攻击，如 SQL 注入、跨站脚本（XSS）攻击和跨站请求伪造（CSRF）等 WAF 一般部署在 Web 服务器之前，用来保护 Web 应用 # WAF 与传统安全设备 传统安全">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WAF">
 <meta property="og:url" content="http://example.com/2024/06/07/WAF/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="WAFWAF（Web Application Firewall，网页应用防火墙）是一种专门设计用于保护Web应用程序的安全设备或软件，旨在通过监控、过滤和分析HTTP&#x2F;HTTPS流量，防止常见的Web攻击，如SQL注入、跨站脚本（XSS）攻击和跨站请求伪造（CSRF）等 WAF一般部署在Web服务器之前，用来保护Web应用 WAF与传统安全设备传统安全设备特点：  IPS：针对蠕虫、网络">
+<meta property="og:description" content="# WAF WAF （ Web Application Firewall ，网页应用防火墙）是一种专门设计用于保护 Web 应用程序的安全设备或软件，旨在通过监控、过滤和分析 HTTP&#x2F;HTTPS 流量，防止常见的 Web 攻击，如 SQL 注入、跨站脚本（XSS）攻击和跨站请求伪造（CSRF）等 WAF 一般部署在 Web 服务器之前，用来保护 Web 应用 # WAF 与传统安全设备 传统安全">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406070038139.png">
 <meta property="og:image" content="https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406072010973.png">
@@ -482,56 +482,70 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="WAF"><a href="#WAF" class="headerlink" title="WAF"></a>WAF</h1><p><code>WAF</code>（<code>Web Application Firewall</code>，网页应用防火墙）是一种专门设计用于保护Web应用程序的安全设备或软件，旨在通过监控、过滤和分析HTTP&#x2F;HTTPS流量，防止常见的Web攻击，如SQL注入、跨站脚本（XSS）攻击和跨站请求伪造（CSRF）等</p>
-<p>WAF一般部署在Web服务器之前，用来保护Web应用</p>
-<h2 id="WAF与传统安全设备"><a href="#WAF与传统安全设备" class="headerlink" title="WAF与传统安全设备"></a>WAF与传统安全设备</h2><p>传统安全设备特点：</p>
+            <h1 id="waf"><a class="markdownIt-Anchor" href="#waf">#</a> WAF</h1>
+<p><code>WAF</code> （ <code>Web Application Firewall</code> ，网页应用防火墙）是一种专门设计用于保护 Web 应用程序的安全设备或软件，旨在通过监控、过滤和分析 HTTP/HTTPS 流量，防止常见的 Web 攻击，如 SQL 注入、跨站脚本（XSS）攻击和跨站请求伪造（CSRF）等</p>
+<p>WAF 一般部署在 Web 服务器之前，用来保护 Web 应用</p>
+<h2 id="waf与传统安全设备"><a class="markdownIt-Anchor" href="#waf与传统安全设备">#</a> WAF 与传统安全设备</h2>
+<p>传统安全设备特点：</p>
 <ul>
-<li><p>IPS：针对蠕虫、网络病毒、后门木马防护,不具备WEB应用层的安全防护能力</p>
+<li>
+<p>IPS：针对蠕虫、网络病毒、后门木马防护，不具备 WEB 应用层的安全防护能力</p>
 </li>
-<li><p>传统FW：作为内网与外网之间的一种访问控制设备，提供3-4层的安全防护能力,不具备WEB应用层的安全防护能力</p>
+<li>
+<p>传统 FW：作为内网与外网之间的一种访问控制设备，提供 3-4 层的安全防护能力，不具备 WEB 应用层的安全防护能力</p>
 </li>
-<li><p>UTM&#x2F;NGFW:优势，UTM或者NGFW把多种安全能力融合为一体（上网行为管理、IPS、防病毒、WEB安全防护）</p>
+<li>
+<p>UTM/NGFW: 优势，UTM 或者 NGFW 把多种安全能力融合为一体（上网行为管理、IPS、防病毒、WEB 安全防护）</p>
 <p>劣势：各安全引擎模式开启之后设备综合性能势必降低！</p>
-<p>n多核架构&#x2F;MIPS架构无法实现对HTTP&#x2F;HTTPS数据包的深度检测（包括转换编码、拼接攻击语句、大小写变换、超大报文等），WEB应用攻击的检出率低、漏报率高！</p>
+<p>n 多核架构 / MIPS 架构无法实现对 HTTP/HTTPS 数据包的深度检测（包括转换编码、拼接攻击语句、大小写变换、超大报文等），WEB 应用攻击的检出率低、漏报率高！</p>
 </li>
 </ul>
-<h2 id="来自ChatGPT对于WAF与传统安全设备的区别的回答："><a href="#来自ChatGPT对于WAF与传统安全设备的区别的回答：" class="headerlink" title="来自ChatGPT对于WAF与传统安全设备的区别的回答："></a>来自ChatGPT对于WAF与传统安全设备的区别的回答：</h2><h3 id="1-保护对象"><a href="#1-保护对象" class="headerlink" title="1. 保护对象"></a>1. <strong>保护对象</strong></h3><ul>
-<li><strong>WAF</strong>：专门保护Web应用程序，主要针对HTTP&#x2F;HTTPS流量和应用层攻击，如SQL注入、跨站脚本（XSS）、跨站请求伪造（CSRF）等。</li>
-<li><strong>传统防火墙</strong>：主要保护网络边界，控制网络层的流量，防止未授权访问和攻击，针对IP、端口、协议等进行过滤。</li>
-<li><strong>IDS&#x2F;IPS</strong>：监控和分析网络流量以检测和阻止各种网络攻击和异常行为，保护整个网络环境。</li>
-</ul>
-<h3 id="2-工作层面"><a href="#2-工作层面" class="headerlink" title="2. 工作层面"></a>2. <strong>工作层面</strong></h3><p><img lazyload src="/images/loading.svg" data-src="https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406070038139.png" alt="OSI七层网络协议 | Clei&#39;s Blog"></p>
+<h2 id="来自chatgpt对于waf与传统安全设备的区别的回答"><a class="markdownIt-Anchor" href="#来自chatgpt对于waf与传统安全设备的区别的回答">#</a> 来自 ChatGPT 对于 WAF 与传统安全设备的区别的回答：</h2>
+<h3 id="1-保护对象"><a class="markdownIt-Anchor" href="#1-保护对象">#</a> 1. <strong>保护对象</strong></h3>
 <ul>
-<li><strong>WAF</strong>：工作在应用层（OSI模型的第7层），深入分析Web请求和响应，理解HTTP&#x2F;HTTPS协议和Web应用逻辑。</li>
-<li><strong>传统防火墙</strong>：工作在网络层（第3层）和传输层（第4层），关注IP地址、端口号和传输协议。</li>
-<li><strong>IDS&#x2F;IPS</strong>：通常工作在网络层和传输层，有时也涉及应用层，但主要用于广泛的网络流量监控和防护。</li>
+<li><strong>WAF</strong>：专门保护 Web 应用程序，主要针对 HTTP/HTTPS 流量和应用层攻击，如 SQL 注入、跨站脚本（XSS）、跨站请求伪造（CSRF）等。</li>
+<li><strong>传统防火墙</strong>：主要保护网络边界，控制网络层的流量，防止未授权访问和攻击，针对 IP、端口、协议等进行过滤。</li>
+<li><strong>IDS/IPS</strong>：监控和分析网络流量以检测和阻止各种网络攻击和异常行为，保护整个网络环境。</li>
 </ul>
-<h3 id="3-检测和防护方法"><a href="#3-检测和防护方法" class="headerlink" title="3. 检测和防护方法"></a>3. <strong>检测和防护方法</strong></h3><ul>
-<li><strong>WAF</strong>：使用签名检测、行为分析、规则引擎、学习模式等方法，针对Web特有的攻击进行深度检查和防护。</li>
-<li><strong>传统防火墙</strong>：使用基于状态的包过滤、访问控制列表（ACL）、NAT等方法，控制和管理进出网络的流量。</li>
-<li><strong>IDS&#x2F;IPS</strong>：使用签名检测、异常检测、协议分析等方法，检测并响应各种网络攻击，如DDoS、端口扫描、恶意流量等。</li>
+<h3 id="2-工作层面"><a class="markdownIt-Anchor" href="#2-工作层面">#</a> 2. <strong>工作层面</strong></h3>
+<p><img lazyload src="/images/loading.svg" data-src="https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406070038139.png" alt="OSI七层网络协议 | Clei's Blog"></p>
+<ul>
+<li><strong>WAF</strong>：工作在应用层（OSI 模型的第 7 层），深入分析 Web 请求和响应，理解 HTTP/HTTPS 协议和 Web 应用逻辑。</li>
+<li><strong>传统防火墙</strong>：工作在网络层（第 3 层）和传输层（第 4 层），关注 IP 地址、端口号和传输协议。</li>
+<li><strong>IDS/IPS</strong>：通常工作在网络层和传输层，有时也涉及应用层，但主要用于广泛的网络流量监控和防护。</li>
 </ul>
-<h3 id="4-部署位置"><a href="#4-部署位置" class="headerlink" title="4. 部署位置"></a>4. <strong>部署位置</strong></h3><ul>
-<li><strong>WAF</strong>：通常部署在Web服务器前端，保护特定的Web应用程序或Web服务器。</li>
+<h3 id="3-检测和防护方法"><a class="markdownIt-Anchor" href="#3-检测和防护方法">#</a> 3. <strong>检测和防护方法</strong></h3>
+<ul>
+<li><strong>WAF</strong>：使用签名检测、行为分析、规则引擎、学习模式等方法，针对 Web 特有的攻击进行深度检查和防护。</li>
+<li><strong>传统防火墙</strong>：使用基于状态的包过滤、访问控制列表（ACL）、NAT 等方法，控制和管理进出网络的流量。</li>
+<li><strong>IDS/IPS</strong>：使用签名检测、异常检测、协议分析等方法，检测并响应各种网络攻击，如 DDoS、端口扫描、恶意流量等。</li>
+</ul>
+<h3 id="4-部署位置"><a class="markdownIt-Anchor" href="#4-部署位置">#</a> 4. <strong>部署位置</strong></h3>
+<ul>
+<li><strong>WAF</strong>：通常部署在 Web 服务器前端，保护特定的 Web 应用程序或 Web 服务器。</li>
 <li><strong>传统防火墙</strong>：部署在网络边界，如企业网络和互联网之间，保护整个网络的进出口。</li>
-<li><strong>IDS&#x2F;IPS</strong>：可以部署在网络的不同位置，如网络边界、内部网络段之间，或者靠近关键资源，监控并保护整个网络环境。</li>
+<li><strong>IDS/IPS</strong>：可以部署在网络的不同位置，如网络边界、内部网络段之间，或者靠近关键资源，监控并保护整个网络环境。</li>
 </ul>
-<h3 id="5-功能和用途"><a href="#5-功能和用途" class="headerlink" title="5. 功能和用途"></a>5. <strong>功能和用途</strong></h3><ul>
-<li>WAF：<ul>
-<li>防护Web应用层攻击</li>
-<li>HTTP&#x2F;HTTPS流量分析和过滤</li>
-<li>Web应用安全策略管理</li>
+<h3 id="5-功能和用途"><a class="markdownIt-Anchor" href="#5-功能和用途">#</a> 5. <strong>功能和用途</strong></h3>
+<ul>
+<li>WAF：
+<ul>
+<li>防护 Web 应用层攻击</li>
+<li>HTTP/HTTPS 流量分析和过滤</li>
+<li>Web 应用安全策略管理</li>
 <li>输入验证和输出编码</li>
 </ul>
 </li>
-<li>传统防火墙：<ul>
+<li>传统防火墙：
+<ul>
 <li>网络访问控制和流量过滤</li>
-<li>VPN支持和流量加密</li>
+<li>VPN 支持和流量加密</li>
 <li>基于状态的包过滤</li>
 <li>防止未授权访问</li>
 </ul>
 </li>
-<li>IDS&#x2F;IPS：<ul>
+<li>IDS/IPS：
+<ul>
 <li>实时监控和检测网络攻击</li>
 <li>自动响应和阻止攻击（IPS）</li>
 <li>网络行为分析和异常检测</li>
@@ -539,164 +553,197 @@
 </ul>
 </li>
 </ul>
-<h3 id="6-具体防护场景"><a href="#6-具体防护场景" class="headerlink" title="6. 具体防护场景"></a>6. <strong>具体防护场景</strong></h3><ul>
-<li><strong>WAF</strong>：保护在线购物网站、Web服务API、内容管理系统（CMS）等Web应用程序，防止Web特有的攻击。</li>
+<h3 id="6-具体防护场景"><a class="markdownIt-Anchor" href="#6-具体防护场景">#</a> 6. <strong>具体防护场景</strong></h3>
+<ul>
+<li><strong>WAF</strong>：保护在线购物网站、Web 服务 API、内容管理系统（CMS）等 Web 应用程序，防止 Web 特有的攻击。</li>
 <li><strong>传统防火墙</strong>：保护企业网络边界，控制内部网络和外部网络之间的流量，防止未经授权的访问和外部攻击。</li>
-<li><strong>IDS&#x2F;IPS</strong>：监控整个网络的流量，检测和阻止各种类型的攻击，保护网络中的所有设备和服务。</li>
+<li><strong>IDS/IPS</strong>：监控整个网络的流量，检测和阻止各种类型的攻击，保护网络中的所有设备和服务。</li>
 </ul>
-<h3 id="7-优势和劣势"><a href="#7-优势和劣势" class="headerlink" title="7. 优势和劣势"></a>7. <strong>优势和劣势</strong></h3><ul>
-<li>WAF：<ul>
-<li><strong>优势</strong>：深度保护Web应用程序，针对Web特有攻击提供精细化防护。</li>
-<li><strong>劣势</strong>：只能保护Web应用，对非HTTP&#x2F;HTTPS流量无效。</li>
+<h3 id="7-优势和劣势"><a class="markdownIt-Anchor" href="#7-优势和劣势">#</a> 7. <strong>优势和劣势</strong></h3>
+<ul>
+<li>WAF：
+<ul>
+<li><strong>优势</strong>：深度保护 Web 应用程序，针对 Web 特有攻击提供精细化防护。</li>
+<li><strong>劣势</strong>：只能保护 Web 应用，对非 HTTP/HTTPS 流量无效。</li>
 </ul>
 </li>
-<li>传统防火墙：<ul>
+<li>传统防火墙：
+<ul>
 <li><strong>优势</strong>：提供广泛的网络层和传输层保护，易于部署和管理。</li>
 <li><strong>劣势</strong>：无法深入检查和理解应用层流量，难以防御复杂的应用层攻击。</li>
 </ul>
 </li>
-<li>IDS&#x2F;IPS：<ul>
+<li>IDS/IPS：
+<ul>
 <li><strong>优势</strong>：实时检测和响应各种网络攻击，保护整个网络环境。</li>
 <li><strong>劣势</strong>：可能产生误报和漏报，配置和管理复杂。</li>
 </ul>
 </li>
 </ul>
-<h2 id="WAF的工作原理"><a href="#WAF的工作原理" class="headerlink" title="WAF的工作原理"></a>WAF的工作原理</h2><h3 id="1-流量过滤"><a href="#1-流量过滤" class="headerlink" title="1. 流量过滤"></a>1. <strong>流量过滤</strong></h3><p>WAF通过拦截并检查所有进入和离开Web服务器的HTTP&#x2F;HTTPS流量，确保只有合法和安全的请求能够到达应用程序。这包括：</p>
+<h2 id="waf的工作原理"><a class="markdownIt-Anchor" href="#waf的工作原理">#</a> WAF 的工作原理</h2>
+<h3 id="1-流量过滤"><a class="markdownIt-Anchor" href="#1-流量过滤">#</a> 1. <strong>流量过滤</strong></h3>
+<p>WAF 通过拦截并检查所有进入和离开 Web 服务器的 HTTP/HTTPS 流量，确保只有合法和安全的请求能够到达应用程序。这包括：</p>
 <ul>
-<li><strong>请求过滤</strong>：检查每个请求的URL、头信息、参数和正文内容。</li>
+<li><strong>请求过滤</strong>：检查每个请求的 URL、头信息、参数和正文内容。</li>
 <li><strong>响应过滤</strong>：检查服务器返回的响应内容，防止敏感信息泄露。</li>
 </ul>
-<h3 id="2-签名检测"><a href="#2-签名检测" class="headerlink" title="2. 签名检测"></a>2. <strong>签名检测</strong></h3><p>WAF使用预定义的攻击签名库来识别已知的攻击模式。当请求或响应匹配这些签名时，WAF会采取相应的措施，如阻止请求、记录事件或向管理员发送警报。</p>
+<h3 id="2-签名检测"><a class="markdownIt-Anchor" href="#2-签名检测">#</a> 2. <strong>签名检测</strong></h3>
+<p>WAF 使用预定义的攻击签名库来识别已知的攻击模式。当请求或响应匹配这些签名时，WAF 会采取相应的措施，如阻止请求、记录事件或向管理员发送警报。</p>
 <ul>
-<li><strong>例子</strong>：SQL注入签名、XSS攻击签名。</li>
+<li><strong>例子</strong>：SQL 注入签名、XSS 攻击签名。</li>
 </ul>
-<h3 id="3-行为分析"><a href="#3-行为分析" class="headerlink" title="3. 行为分析"></a>3. <strong>行为分析</strong></h3><p>通过分析正常流量模式，WAF可以建立基线并检测异常行为。这有助于识别零日攻击和其他未知威胁。</p>
+<h3 id="3-行为分析"><a class="markdownIt-Anchor" href="#3-行为分析">#</a> 3. <strong>行为分析</strong></h3>
+<p>通过分析正常流量模式，WAF 可以建立基线并检测异常行为。这有助于识别零日攻击和其他未知威胁。</p>
 <ul>
-<li><strong>例子</strong>：如果某IP地址在短时间内发送了大量的请求，WAF可以将其视为可能的攻击并阻止其进一步请求。可以防御CC攻击（但是无法完全防御DDos攻击）</li>
+<li><strong>例子</strong>：如果某 IP 地址在短时间内发送了大量的请求，WAF 可以将其视为可能的攻击并阻止其进一步请求。可以防御 CC 攻击（但是无法完全防御 DDos 攻击）</li>
 </ul>
-<h3 id="4-规则引擎"><a href="#4-规则引擎" class="headerlink" title="4. 规则引擎"></a>4. <strong>规则引擎</strong></h3><p>管理员可以根据特定需求和安全策略定义自定义规则。WAF会根据这些规则检测并响应特定类型的流量。</p>
+<h3 id="4-规则引擎"><a class="markdownIt-Anchor" href="#4-规则引擎">#</a> 4. <strong>规则引擎</strong></h3>
+<p>管理员可以根据特定需求和安全策略定义自定义规则。WAF 会根据这些规则检测并响应特定类型的流量。</p>
 <ul>
-<li><strong>例子</strong>：阻止来自某些地理位置的请求、限制特定IP地址的访问频率。</li>
+<li><strong>例子</strong>：阻止来自某些地理位置的请求、限制特定 IP 地址的访问频率。</li>
 </ul>
-<h3 id="5-安全策略管理"><a href="#5-安全策略管理" class="headerlink" title="5. 安全策略管理"></a>5. <strong>安全策略管理</strong></h3><p>WAF允许管理员定义和管理一系列安全策略，以适应不同的应用场景和需求。这些策略可以涵盖访问控制、输入验证、输出编码等方面。</p>
+<h3 id="5-安全策略管理"><a class="markdownIt-Anchor" href="#5-安全策略管理">#</a> 5. <strong>安全策略管理</strong></h3>
+<p>WAF 允许管理员定义和管理一系列安全策略，以适应不同的应用场景和需求。这些策略可以涵盖访问控制、输入验证、输出编码等方面。</p>
 <ul>
 <li><strong>例子</strong>：仅允许特定用户组访问某些敏感功能。</li>
 </ul>
-<h3 id="6-学习模式"><a href="#6-学习模式" class="headerlink" title="6. 学习模式"></a>6. <strong>学习模式</strong></h3><p>许多现代WAF具备学习模式功能，能够自动学习和适应应用程序的正常行为，并动态调整防护策略以应对不断变化的威胁环境。</p>
+<h3 id="6-学习模式"><a class="markdownIt-Anchor" href="#6-学习模式">#</a> 6. <strong>学习模式</strong></h3>
+<p>许多现代 WAF 具备学习模式功能，能够自动学习和适应应用程序的正常行为，并动态调整防护策略以应对不断变化的威胁环境。</p>
 <ul>
 <li><strong>例子</strong>：通过分析用户行为，自动调整防护规则以减少误报和漏报。</li>
 </ul>
-<h3 id="7-日志记录与审计"><a href="#7-日志记录与审计" class="headerlink" title="7. 日志记录与审计"></a>7. <strong>日志记录与审计</strong></h3><p>WAF记录所有检测到的威胁和采取的响应措施，生成详细的日志和报告，帮助管理员进行分析、审计和改进安全策略。</p>
+<h3 id="7-日志记录与审计"><a class="markdownIt-Anchor" href="#7-日志记录与审计">#</a> 7. <strong>日志记录与审计</strong></h3>
+<p>WAF 记录所有检测到的威胁和采取的响应措施，生成详细的日志和报告，帮助管理员进行分析、审计和改进安全策略。</p>
 <ul>
-<li><strong>例子</strong>：记录所有阻止的SQL注入尝试，并生成每周安全报告。</li>
+<li><strong>例子</strong>：记录所有阻止的 SQL 注入尝试，并生成每周安全报告。</li>
 </ul>
-<h3 id="8-集成与自动化"><a href="#8-集成与自动化" class="headerlink" title="8. 集成与自动化"></a>8. <strong>集成与自动化</strong></h3><p>WAF可以与其他安全设备和软件集成，如防火墙、入侵检测系统（IDS）、入侵防御系统（IPS）等，以形成综合的安全防护体系。</p>
+<h3 id="8-集成与自动化"><a class="markdownIt-Anchor" href="#8-集成与自动化">#</a> 8. <strong>集成与自动化</strong></h3>
+<p>WAF 可以与其他安全设备和软件集成，如防火墙、入侵检测系统（IDS）、入侵防御系统（IPS）等，以形成综合的安全防护体系。</p>
 <ul>
-<li><strong>例子</strong>：当WAF检测到某个攻击行为时，自动通知IPS进行进一步处理。</li>
+<li><strong>例子</strong>：当 WAF 检测到某个攻击行为时，自动通知 IPS 进行进一步处理。</li>
 </ul>
-<h3 id="WAF的工作流程"><a href="#WAF的工作流程" class="headerlink" title="WAF的工作流程"></a>WAF的工作流程</h3><ol>
-<li><strong>接收请求</strong>：当用户向Web服务器发送HTTP&#x2F;HTTPS请求时，WAF首先接收该请求。</li>
-<li><strong>分析请求</strong>：WAF检查请求的各个部分，包括URL、参数、头信息和正文内容，进行签名检测和行为分析。</li>
+<h3 id="waf的工作流程"><a class="markdownIt-Anchor" href="#waf的工作流程">#</a> WAF 的工作流程</h3>
+<ol>
+<li><strong>接收请求</strong>：当用户向 Web 服务器发送 HTTP/HTTPS 请求时，WAF 首先接收该请求。</li>
+<li><strong>分析请求</strong>：WAF 检查请求的各个部分，包括 URL、参数、头信息和正文内容，进行签名检测和行为分析。</li>
 <li><strong>应用策略</strong>：根据预定义的安全策略和规则，决定如何处理该请求。可能的操作包括允许、阻止、记录或向管理员发送警报。</li>
-<li><strong>转发请求</strong>：如果请求被允许，WAF将其转发到Web服务器进行处理。</li>
-<li><strong>监控响应</strong>：WAF检查服务器返回的响应，确保没有敏感信息泄露或其他安全问题。</li>
-<li><strong>返回响应</strong>：最后，WAF将安全的响应返回给用户。</li>
+<li><strong>转发请求</strong>：如果请求被允许，WAF 将其转发到 Web 服务器进行处理。</li>
+<li><strong>监控响应</strong>：WAF 检查服务器返回的响应，确保没有敏感信息泄露或其他安全问题。</li>
+<li><strong>返回响应</strong>：最后，WAF 将安全的响应返回给用户。</li>
 </ol>
-<h2 id="简单的自定义WAF"><a href="#简单的自定义WAF" class="headerlink" title="简单的自定义WAF"></a>简单的自定义WAF</h2><p>编写代码来捕获和解析 HTTP&#x2F;HTTPS 流量。可以使用以下库：</p>
+<h2 id="简单的自定义waf"><a class="markdownIt-Anchor" href="#简单的自定义waf">#</a> 简单的自定义 WAF</h2>
+<p>编写代码来捕获和解析 HTTP/HTTPS 流量。可以使用以下库：</p>
 <ul>
-<li>Python: <code>scapy</code>, <code>dpkt</code>, <code>http.server</code></li>
-<li>Node.js: <code>http</code>, <code>https</code></li>
-<li>C&#x2F;C++: <code>libpcap</code>, <code>libnetfilter_queue</code></li>
+<li>Python:  <code>scapy</code> ,  <code>dpkt</code> ,  <code>http.server</code></li>
+<li>Node.js:  <code>http</code> ,  <code>https</code></li>
+<li>C/C++:  <code>libpcap</code> ,  <code>libnetfilter_queue</code></li>
 </ul>
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> http.server <span class="keyword">import</span> BaseHTTPRequestHandler, HTTPServer</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SimpleWAF</span>(<span class="title class_ inherited__">BaseHTTPRequestHandler</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">do_GET</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">if</span> self.is_malicious_request(self.path):</span><br><span class="line">            self.send_response(<span class="number">403</span>)</span><br><span class="line">            self.end_headers()</span><br><span class="line">            self.wfile.write(<span class="string">b&quot;403 Forbidden&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self.send_response(<span class="number">200</span>)</span><br><span class="line">            self.end_headers()</span><br><span class="line">            self.wfile.write(<span class="string">b&quot;Hello, World!&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">is_malicious_request</span>(<span class="params">self, path</span>):</span><br><span class="line">        patterns = [</span><br><span class="line">            re.<span class="built_in">compile</span>(<span class="string">r&quot;(&lt;|%3C).*script.*(&gt;|%3E)&quot;</span>, re.IGNORECASE),  <span class="comment"># XSS</span></span><br><span class="line">            re.<span class="built_in">compile</span>(<span class="string">r&quot;(\%27)|(\&#x27;)|(\-\-)|(\%23)|(#)&quot;</span>, re.IGNORECASE),  <span class="comment"># SQL Injection</span></span><br><span class="line">        ]</span><br><span class="line">        <span class="keyword">for</span> pattern <span class="keyword">in</span> patterns:</span><br><span class="line">            <span class="keyword">if</span> pattern.search(path):</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    server = HTTPServer((<span class="string">&#x27;localhost&#x27;</span>, <span class="number">8080</span>), SimpleWAF)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Starting server at http://localhost:8080&quot;</span>)</span><br><span class="line">    server.serve_forever()</span><br></pre></td></tr></table></figure></div>
-
 <div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SimpleWAF</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="variable">$patterns</span> = [</span><br><span class="line">        <span class="string">&#x27;/(&lt;|%3C).*script.*(&gt;|%3E)/i&#x27;</span>,  <span class="comment">// XSS</span></span><br><span class="line">        <span class="string">&#x27;/(\%27)|(\&#x27;)|(\-\-)|(\%23)|(#)/i&#x27;</span>,  <span class="comment">// SQL Injection</span></span><br><span class="line">        <span class="string">&#x27;/select\b|insert\b|update\b|delete\b|drop\b|union\b/i&#x27;</span>  <span class="comment">// SQL Keywords</span></span><br><span class="line">    ];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">filterRequest</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">filterRequest</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">foreach</span> (<span class="variable">$_GET</span> <span class="keyword">as</span> <span class="variable">$key</span> =&gt; <span class="variable">$value</span>) &#123;</span><br><span class="line">            <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">checkMalicious</span>(<span class="variable">$value</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">foreach</span> (<span class="variable">$_POST</span> <span class="keyword">as</span> <span class="variable">$key</span> =&gt; <span class="variable">$value</span>) &#123;</span><br><span class="line">            <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">checkMalicious</span>(<span class="variable">$value</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">foreach</span> (<span class="variable">$_COOKIE</span> <span class="keyword">as</span> <span class="variable">$key</span> =&gt; <span class="variable">$value</span>) &#123;</span><br><span class="line">            <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">checkMalicious</span>(<span class="variable">$value</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">checkMalicious</span>(<span class="params"><span class="variable">$value</span></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">foreach</span> (<span class="variable language_">$this</span>-&gt;patterns <span class="keyword">as</span> <span class="variable">$pattern</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="title function_ invoke__">preg_match</span>(<span class="variable">$pattern</span>, <span class="variable">$value</span>)) &#123;</span><br><span class="line">                <span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">blockRequest</span>();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">blockRequest</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="title function_ invoke__">header</span>(<span class="string">&#x27;HTTP/1.1 403 Forbidden&#x27;</span>);</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">&quot;403 Forbidden - Your request has been blocked by the WAF.&quot;</span>;</span><br><span class="line">        <span class="keyword">exit</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 初始化 WAF</span></span><br><span class="line"><span class="keyword">new</span> <span class="title function_ invoke__">SimpleWAF</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 继续处理正常请求</span></span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;Hello, World!&quot;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<h2 id="WAF-Bypass"><a href="#WAF-Bypass" class="headerlink" title="WAF Bypass"></a>WAF Bypass</h2><h3 id="超过WAF配额绕过"><a href="#超过WAF配额绕过" class="headerlink" title="超过WAF配额绕过"></a>超过WAF配额绕过</h3><p>为不干扰到网站的正常运行，配置WAF检测额度内进行过滤，有些WAF就会设置如果数据包长度超过所检测的长度，就会对部分数据包或者是数据包的部分内容进行无检测“放行”。</p>
-<h4 id="增加参数个数"><a href="#增加参数个数" class="headerlink" title="增加参数个数"></a>增加参数个数</h4><p>配置的原因，例如safedog，只会检测前100个参数，把自己的执行语句放在100个之后</p>
-<h4 id="增加参数长度"><a href="#增加参数长度" class="headerlink" title="增加参数长度"></a>增加参数长度</h4><p>文件上传漏洞利用时，增加无意义数据，webshell放在最后面；</p>
-<p>SQL注入时，增加URL编码长度，并注释掉；</p>
-<p>xss测试时加入无意义内容</p>
-<h4 id="增加WAF负载"><a href="#增加WAF负载" class="headerlink" title="增加WAF负载"></a>增加WAF负载</h4><p>向WAF发送大量正常数据包，并发送异常数据包，导致站点流量过大，可能会对部分数据包进行检查，注意分寸，避免造成宕机。</p>
-<h3 id="构造异常数据包"><a href="#构造异常数据包" class="headerlink" title="构造异常数据包"></a>构造异常数据包</h3><h4 id="双参数绕过"><a href="#双参数绕过" class="headerlink" title="双参数绕过"></a>双参数绕过</h4><p>网站有一个id参数，在数据包中包含两个id参数进去，WAF可能只检测第一个，第二个就会被服务器执行</p>
-<h4 id="请求方式转换"><a href="#请求方式转换" class="headerlink" title="请求方式转换"></a>请求方式转换</h4><p>根据对WAF配置的不同</p>
-<p>如果WAF只检验GET类型的包，忽略POST类型的包，修改数据包类型尝试绕过</p>
-<p>如果WAF只检验POST类型的包，忽略GET类型的包，修改数据包类型尝试绕过</p>
-<p>有时，也可尝试，把数据包改为request类型等或根本就不存在的其他类型</p>
-<p>另一方面：POST在提交数据的时候有两种方式，第一种方式是使用urlencode的方式提交，第二种方式是使用form-data的方式提交。当我们在测试站点的时候，如果发现POST提交的数据被过滤掉了，此时可以考虑使用form-data的方式去提交。</p>
-<h3 id="绕过匹配"><a href="#绕过匹配" class="headerlink" title="绕过匹配"></a>绕过匹配</h3><h4 id="大小写变换"><a href="#大小写变换" class="headerlink" title="大小写变换"></a>大小写变换</h4><blockquote>
-<p>?id&#x3D;-1’ UnIOn SeLEct 1,VERsion(),3  </p>
+<h2 id="waf-bypass"><a class="markdownIt-Anchor" href="#waf-bypass">#</a> WAF Bypass</h2>
+<h3 id="超过waf配额绕过"><a class="markdownIt-Anchor" href="#超过waf配额绕过">#</a> 超过 WAF 配额绕过</h3>
+<p>为不干扰到网站的正常运行，配置 WAF 检测额度内进行过滤，有些 WAF 就会设置如果数据包长度超过所检测的长度，就会对部分数据包或者是数据包的部分内容进行无检测 “放行”。</p>
+<h4 id="增加参数个数"><a class="markdownIt-Anchor" href="#增加参数个数">#</a> 增加参数个数</h4>
+<p>配置的原因，例如 safedog，只会检测前 100 个参数，把自己的执行语句放在 100 个之后</p>
+<h4 id="增加参数长度"><a class="markdownIt-Anchor" href="#增加参数长度">#</a> 增加参数长度</h4>
+<p>文件上传漏洞利用时，增加无意义数据，webshell 放在最后面；</p>
+<p>SQL 注入时，增加 URL 编码长度，并注释掉；</p>
+<p>xss 测试时加入无意义内容</p>
+<h4 id="增加waf负载"><a class="markdownIt-Anchor" href="#增加waf负载">#</a> 增加 WAF 负载</h4>
+<p>向 WAF 发送大量正常数据包，并发送异常数据包，导致站点流量过大，可能会对部分数据包进行检查，注意分寸，避免造成宕机。</p>
+<h3 id="构造异常数据包"><a class="markdownIt-Anchor" href="#构造异常数据包">#</a> 构造异常数据包</h3>
+<h4 id="双参数绕过"><a class="markdownIt-Anchor" href="#双参数绕过">#</a> 双参数绕过</h4>
+<p>网站有一个 id 参数，在数据包中包含两个 id 参数进去，WAF 可能只检测第一个，第二个就会被服务器执行</p>
+<h4 id="请求方式转换"><a class="markdownIt-Anchor" href="#请求方式转换">#</a> 请求方式转换</h4>
+<p>根据对 WAF 配置的不同</p>
+<p>如果 WAF 只检验 GET 类型的包，忽略 POST 类型的包，修改数据包类型尝试绕过</p>
+<p>如果 WAF 只检验 POST 类型的包，忽略 GET 类型的包，修改数据包类型尝试绕过</p>
+<p>有时，也可尝试，把数据包改为 request 类型等或根本就不存在的其他类型</p>
+<p>另一方面：POST 在提交数据的时候有两种方式，第一种方式是使用 urlencode 的方式提交，第二种方式是使用 form-data 的方式提交。当我们在测试站点的时候，如果发现 POST 提交的数据被过滤掉了，此时可以考虑使用 form-data 的方式去提交。</p>
+<h3 id="绕过匹配"><a class="markdownIt-Anchor" href="#绕过匹配">#</a> 绕过匹配</h3>
+<h4 id="大小写变换"><a class="markdownIt-Anchor" href="#大小写变换">#</a> 大小写变换</h4>
+<blockquote>
+<p>?id=-1’ UnIOn SeLEct 1,VERsion(),3</p>
 </blockquote>
-<h4 id="将关键词进行等价替换"><a href="#将关键词进行等价替换" class="headerlink" title="将关键词进行等价替换"></a>将关键词进行等价替换</h4><blockquote>
-<p><code>Hex() bin()</code> 等价于<code>ascii() </code></p>
-<p><code>Sleep()</code> 等价于 <code>benchmark()</code></p>
-<p><code>Mid()substring()</code>等价于 <code>substr() </code></p>
-<p><code>@@user </code>等价于<code>User()</code></p>
-<p><code>@@Version </code>等价于 <code>version()</code></p>
+<h4 id="将关键词进行等价替换"><a class="markdownIt-Anchor" href="#将关键词进行等价替换">#</a> 将关键词进行等价替换</h4>
+<blockquote>
+<p><code>Hex() bin()</code>  等价于 <code>ascii() </code></p>
+<p><code>Sleep()</code>  等价于  <code>benchmark()</code></p>
+<p><code>Mid()substring()</code>  等价于  <code>substr() </code></p>
+<p><code>@@user </code> 等价于 <code>User()</code></p>
+<p><code>@@Version </code> 等价于  <code>version()</code></p>
 </blockquote>
 <p>**greatest 替换 &gt; **</p>
-<p><code>greatest</code>返回两个值中大的那个</p>
+<p><code>greatest</code>  返回两个值中大的那个</p>
 <blockquote>
-<p>?id&#x3D;-1’ union select greatest(ascii(substr(database(),0,1)),1) –+</p>
+<p>?id=-1’ union select greatest(ascii(substr(database(),0,1)),1) --+</p>
 </blockquote>
 <p><strong>least  替换 &lt;</strong></p>
-<p><code>least</code>返回两个值中小的那个</p>
+<p><code>least</code>  返回两个值中小的那个</p>
 <blockquote>
-<p>?id&#x3D;-1’ union select least(ascii(substr(database(),0,1)),1000000) –+</p>
+<p>?id=-1’ union select least(ascii(substr(database(),0,1)),1000000) --+</p>
 </blockquote>
-<p><strong>strcmp函数</strong></p>
-<p>比较两个值大小，相等返回0 后者比前者大返回-1 小返回1</p>
+<p><strong>strcmp 函数</strong></p>
+<p>比较两个值大小，相等返回 0 后者比前者大返回 - 1 小返回 1</p>
 <blockquote>
-<p>?id&#x3D;-1’ union select srtcmp(ascii(substr(database(),0,1)),100) –+</p>
+<p>?id=-1’ union select srtcmp(ascii(substr(database(),0,1)),100) --+</p>
 </blockquote>
-<p><strong>in 替换 &#x3D;</strong></p>
-<p>相等返回1 不相等返回 0</p>
+<p><strong>in 替换 =</strong></p>
+<p>相等返回 1 不相等返回 0</p>
 <blockquote>
-<p>?id&#x3D;-1’ union select substr(database()) in (“u”) –+</p>
+<p>?id=-1’ union select substr(database()) in (“u”) --+</p>
 </blockquote>
-<p><strong>between and 替换 &#x3D;</strong></p>
+<p><strong>between and 替换 =</strong></p>
 <blockquote>
-<p>?id&#x3D;-1’ union select substr(database()) between “a” and “u” –+</p>
+<p>?id=-1’ union select substr(database()) between “a” and “u” --+</p>
 </blockquote>
 <p><strong>form for</strong></p>
 <p>盲注过滤逗号</p>
 <blockquote>
-<p>?id&#x3D;-1’ union select(database() form 0 for 1) –+</p>
+<p>?id=-1’ union select(database() form 0 for 1) --+</p>
 </blockquote>
 <p><strong>limit A offset B</strong></p>
-<p>当过滤逗号时,limit 后面只能有一个参数，表示要取的数量，offset 表示跳过数量</p>
+<p>当过滤逗号时，limit 后面只能有一个参数，表示要取的数量，offset 表示跳过数量</p>
 <blockquote>
 <p>select * from users limit 3 offset 2</p>
 </blockquote>
-<h4 id="使用嵌套"><a href="#使用嵌套" class="headerlink" title="使用嵌套"></a>使用嵌套</h4><p>对某些关键字替换为空，尝试采用嵌套双写进行绕过</p>
+<h4 id="使用嵌套"><a class="markdownIt-Anchor" href="#使用嵌套">#</a> 使用嵌套</h4>
+<p>对某些关键字替换为空，尝试采用嵌套双写进行绕过</p>
 <blockquote>
 <p>SELselectECT、UNunionION</p>
 </blockquote>
-<h4 id="使用编码"><a href="#使用编码" class="headerlink" title="使用编码"></a>使用编码</h4><blockquote>
-<p>Json<br>Unicode<br>base64<br>urlencode<br>html<br>Serialize</p>
+<h4 id="使用编码"><a class="markdownIt-Anchor" href="#使用编码">#</a> 使用编码</h4>
+<blockquote>
+<p>Json<br>
+Unicode<br>
+base64<br>
+urlencode<br>
+html<br>
+Serialize</p>
 </blockquote>
 <p><strong>双重编码：</strong></p>
-<p>WAF又是会解码后过滤</p>
-<h4 id="特殊符号："><a href="#特殊符号：" class="headerlink" title="特殊符号："></a>特殊符号：</h4><p><strong>*+(-)(@)(!)等替代空格*</strong></p>
+<p>WAF 又是会解码后过滤</p>
+<h4 id="特殊符号"><a class="markdownIt-Anchor" href="#特殊符号">#</a> 特殊符号：</h4>
+<p><strong>*+(-)(@)(!) 等替代空格 *</strong></p>
 <blockquote>
 <p>select+database()</p>
 <p>select@database()</p>
 </blockquote>
-<p><strong>xor逻辑异或</strong></p>
-<p>任意一个数为NULL时,返回NULL</p>
-<p>非NULL的数,逻辑真假值相异，返回1，否则为0</p>
+<p><strong>xor 逻辑异或</strong></p>
+<p>任意一个数为 NULL 时，返回 NULL</p>
+<p>非 NULL 的数，逻辑真假值相异，返回 1，否则为 0</p>
 <blockquote>
-<p>database()&#x3D;”admin” xor 0</p>
+<p>database()=“admin” xor 0</p>
 </blockquote>
-<p><code>/**/  ()  %0a  ``  2个空格</code> 替代 空格</p>
+<p><code>/**/  ()  %0a  ``  2个空格</code>  替代 空格</p>
 <blockquote>
-<p>select&#x2F;**&#x2F;database()</p>
+<p>select/**/database()</p>
 </blockquote>
-<p><strong>替换and or not xor</strong></p>
+<p><strong>替换 and or not xor</strong></p>
 <blockquote>
-<p>and —-&gt; &amp;&amp;    ,or ——&gt; ||  ,xor ——&gt; |     ,not —–&gt;  !</p>
+<p>and ----&gt; &amp;&amp;    ,or ------&gt; ||  ,xor ------&gt; |     ,not -----&gt;  !</p>
 </blockquote>
-<p><strong>替换&#x3D;</strong></p>
+<p><strong>替换 =</strong></p>
 <blockquote>
 <p>like   rlike</p>
 <p>where id rlike 1</p>
@@ -709,53 +756,56 @@
 <p><strong>注释符加换行绕过</strong></p>
 <p><img lazyload src="/images/loading.svg" data-src="https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406072010973.png" alt="image-20240607201043694"></p>
 <blockquote>
-<p>select #a database() </p>
+<p>select #a database()</p>
 <p>selelct %23%0a database()</p>
-<p>(%23表示注释  %0a表示换行)</p>
+<p>(%23 表示注释  %0a 表示换行)</p>
 </blockquote>
 <p><strong>空字节</strong></p>
 <p>有的过滤会碰到空字节会中止过滤</p>
 <blockquote>
-<p>?id&#x3D;1 a%00nd 1&#x3D;2……</p>
-<p>?id&#x3D;1 %00 and 1&#x3D;2……</p>
+<p>?id=1 a%00nd 1=2……</p>
+<p>?id=1 %00 and 1=2……</p>
 </blockquote>
 <p><strong>宽字节</strong></p>
 <blockquote>
-<p>union &#x3D; uю%69яю这里把i不用宽字节 直接url编码 其他的字符都用对应的宽字节<br>select &#x3D; こхlх%уt &#x2F;&#x2F;t不编码 其他的都宽字节 中间插上%<br>from &#x3D; цR%яэ &#x2F;&#x2F;宽字节+%<br>空格&#x3D;%20&#x3D;%ва &#x2F;&#x2F;в是2的款字符 а是0的宽字符<br>, &#x3D; Ь &#x2F;&#x2F;,号的宽字节</p>
+<p>union = uю%69яю这里把 i 不用宽字节 直接 url 编码 其他的字符都用对应的宽字节<br>
+ select = こхlх%уt //t 不编码 其他的都宽字节 中间插上 %<br>
+ from = цR%яэ // 宽字节 +%<br>
+ 空格 =%20=%ва //в是 2 的款字符 а是 0 的宽字符<br>
+，= Ь //, 号的宽字节</p>
 </blockquote>
-<h3 id="http-参数污染"><a href="#http-参数污染" class="headerlink" title="http 参数污染"></a>http 参数污染</h3><p>利用参数污染来导致网站和安全狗接受数据的不一致性，实现绕过的操作。当get方式进行传参时，经过&amp;符号传入多个参数，WAF可能只检测第一个参数的值，然后台却检测最后一个传入的值，此时能够绕过WAF的防护</p>
+<h3 id="http-参数污染"><a class="markdownIt-Anchor" href="#http-参数污染">#</a> http 参数污染</h3>
+<p>利用参数污染来导致网站和安全狗接受数据的不一致性，实现绕过的操作。当 get 方式进行传参时，经过 &amp; 符号传入多个参数，WAF 可能只检测第一个参数的值，然后台却检测最后一个传入的值，此时能够绕过 WAF 的防护</p>
 <p>下图即每种服务器获得到的参数</p>
 <p><img lazyload src="/images/loading.svg" data-src="https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406072026847.png" alt="image-20240607202628738"></p>
-<p><code>?id=1/**&amp;id=-1&#39; union select 1,database(),3 #*/ </code></p>
-<p>安全狗收到的： <code>1/**&amp;id=-1&#39; union select 1,database(),3 #*/    </code>    </p>
+<p><code>?id=1/**&amp;id=-1' union select 1,database(),3 #*/ </code></p>
+<p>安全狗收到的：  <code>1/**&amp;id=-1' union select 1,database(),3 #*/    </code></p>
 <p>被注释，没法执行，安全狗会忽略</p>
-<p>网站收到的： <code>-1&#39; union select 1,database(),3 #*/     </code></p>
+<p>网站收到的：  <code>-1' union select 1,database(),3 #*/     </code></p>
 <p>被带入执行</p>
-<h3 id="构造畸形请求包"><a href="#构造畸形请求包" class="headerlink" title="构造畸形请求包"></a><strong>构造畸形请求包</strong></h3><p>(1) 删掉content-type</p>
-<p>(2) 构造多个filename</p>
-<p>(3)content-type后面加TABLE键</p>
-<p>(4)换行boundary</p>
-<p>(5)文件名前面加空格</p>
-<p>(6)文件名前面加单引号</p>
-<h3 id="白名单Bypass"><a href="#白名单Bypass" class="headerlink" title="白名单Bypass"></a>白名单Bypass</h3><p>方式一：IP白名单</p>
-<p>从网络层获取的ip，这种一般伪造不来，如果是应用层的获取的IP，这样就可能存在伪造白名单IP造成bypass。</p>
-<p>测试方法：修改http的header来bypass WAF</p>
+<h3 id="构造畸形请求包"><a class="markdownIt-Anchor" href="#构造畸形请求包">#</a> <strong>构造畸形请求包</strong></h3>
+<p>(1) 删掉 content-type</p>
+<p>(2) 构造多个 filename</p>
+<p>(3) content-type 后面加 TABLE 键</p>
+<p>(4) 换行 boundary</p>
+<p>(5) 文件名前面加空格</p>
+<p>(6) 文件名前面加单引号</p>
+<h3 id="白名单bypass"><a class="markdownIt-Anchor" href="#白名单bypass">#</a> 白名单 Bypass</h3>
+<p>方式一：IP 白名单</p>
+<p>从网络层获取的 ip，这种一般伪造不来，如果是应用层的获取的 IP，这样就可能存在伪造白名单 IP 造成 bypass。</p>
+<p>测试方法：修改 http 的 header 来 bypass WAF</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">X-forwarded-for</span><br><span class="line">X-remote-IP</span><br><span class="line">X-originating-IP</span><br><span class="line">x-remote-addr</span><br><span class="line">X-Real-ip</span><br></pre></td></tr></table></figure></div>
-
-
 <p>方式二：静态资源</p>
-<p>特定的静态资源后缀请求，常见的静态文件(.js .jpg .swf .css等等)，类似白名单机制，WAF为了检测效率，不去检测这样一些静态文件名后缀的请求。</p>
+<p>特定的静态资源后缀请求，常见的静态文件 (.js .jpg .swf .css 等等)，类似白名单机制，WAF 为了检测效率，不去检测这样一些静态文件名后缀的请求。</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://10.9.9.201/sql.php/1.js?id=1</span><br><span class="line"># Aspx/php只识别到前面的.aspx/.php 后面基本不识别</span><br></pre></td></tr></table></figure></div>
-
-<p>方式三：url白名单</p>
-<p>为了防止误拦，部分WAF内置默认的白名单列表，如admin&#x2F;manager&#x2F;system等管理后台。只要url中存在白名单的字符串，就作为白名单不进行检测。常见的url构造姿势：</p>
+<p>方式三：url 白名单</p>
+<p>为了防止误拦，部分 WAF 内置默认的白名单列表，如 admin/manager/system 等管理后台。只要 url 中存在白名单的字符串，就作为白名单不进行检测。常见的 url 构造姿势：</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">http://10.9.9.201/sql.php/admin.php?id=1</span><br><span class="line">http://10.9.9.201/sql.php?a=/manage/&amp;b=../etc/passwd</span><br><span class="line">http://10.9.9.201/../../../manage/../sql.asp?id=2</span><br></pre></td></tr></table></figure></div>
-
-<p>WAF通过&#x2F;manage&#x2F;“进行比较，只要uri中存在&#x2F;manage&#x2F;就作为白名单不进行检测，这样我们可以通过&#x2F;sql.php?a&#x3D;&#x2F;manage&#x2F;&amp;b&#x3D;..&#x2F;etc&#x2F;passwd 绕过防御规则。</p>
+<p>WAF 通过 /manage/&quot; 进行比较，只要 uri 中存在 /manage/ 就作为白名单不进行检测，这样我们可以通过 /sql.php?a=/manage/&amp;b=…/etc/passwd 绕过防御规则。</p>
 <p>方式四：爬虫白名单</p>
-<p>部分WAF有提供爬虫白名单的功能，识别爬虫的技术一般有两种：</p>
-<p>1、 根据UserAgent 2、通过行为来判断</p>
-<p>UserAgent可以很容易欺骗，我们可以伪装成爬虫尝试绕过。</p>
+<p>部分 WAF 有提供爬虫白名单的功能，识别爬虫的技术一般有两种：</p>
+<p>1、 根据 UserAgent 2、通过行为来判断</p>
+<p>UserAgent 可以很容易欺骗，我们可以伪装成爬虫尝试绕过。</p>
 
         </div>
 
@@ -870,7 +920,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">WAF</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#WAF"><span class="nav-text">WAF</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#WAF%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87"><span class="nav-text">WAF与传统安全设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%A5%E8%87%AAChatGPT%E5%AF%B9%E4%BA%8EWAF%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87%E7%9A%84%E5%8C%BA%E5%88%AB%E7%9A%84%E5%9B%9E%E7%AD%94%EF%BC%9A"><span class="nav-text">来自ChatGPT对于WAF与传统安全设备的区别的回答：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BF%9D%E6%8A%A4%E5%AF%B9%E8%B1%A1"><span class="nav-text">1. 保护对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%B7%A5%E4%BD%9C%E5%B1%82%E9%9D%A2"><span class="nav-text">2. 工作层面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%A3%80%E6%B5%8B%E5%92%8C%E9%98%B2%E6%8A%A4%E6%96%B9%E6%B3%95"><span class="nav-text">3. 检测和防护方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E9%83%A8%E7%BD%B2%E4%BD%8D%E7%BD%AE"><span class="nav-text">4. 部署位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%8A%9F%E8%83%BD%E5%92%8C%E7%94%A8%E9%80%94"><span class="nav-text">5. 功能和用途</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E5%85%B7%E4%BD%93%E9%98%B2%E6%8A%A4%E5%9C%BA%E6%99%AF"><span class="nav-text">6. 具体防护场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E4%BC%98%E5%8A%BF%E5%92%8C%E5%8A%A3%E5%8A%BF"><span class="nav-text">7. 优势和劣势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WAF%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-text">WAF的工作原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%B5%81%E9%87%8F%E8%BF%87%E6%BB%A4"><span class="nav-text">1. 流量过滤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%AD%BE%E5%90%8D%E6%A3%80%E6%B5%8B"><span class="nav-text">2. 签名检测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90"><span class="nav-text">3. 行为分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E8%A7%84%E5%88%99%E5%BC%95%E6%93%8E"><span class="nav-text">4. 规则引擎</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%E7%AE%A1%E7%90%86"><span class="nav-text">5. 安全策略管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%BC%8F"><span class="nav-text">6. 学习模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E6%97%A5%E5%BF%97%E8%AE%B0%E5%BD%95%E4%B8%8E%E5%AE%A1%E8%AE%A1"><span class="nav-text">7. 日志记录与审计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E9%9B%86%E6%88%90%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8C%96"><span class="nav-text">8. 集成与自动化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WAF%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="nav-text">WAF的工作流程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89WAF"><span class="nav-text">简单的自定义WAF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WAF-Bypass"><span class="nav-text">WAF Bypass</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B6%85%E8%BF%87WAF%E9%85%8D%E9%A2%9D%E7%BB%95%E8%BF%87"><span class="nav-text">超过WAF配额绕过</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%BC%82%E5%B8%B8%E6%95%B0%E6%8D%AE%E5%8C%85"><span class="nav-text">构造异常数据包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%95%E8%BF%87%E5%8C%B9%E9%85%8D"><span class="nav-text">绕过匹配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#http-%E5%8F%82%E6%95%B0%E6%B1%A1%E6%9F%93"><span class="nav-text">http 参数污染</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E7%95%B8%E5%BD%A2%E8%AF%B7%E6%B1%82%E5%8C%85"><span class="nav-text">构造畸形请求包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BD%E5%90%8D%E5%8D%95Bypass"><span class="nav-text">白名单Bypass</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#waf"><span class="nav-text"> WAF</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#waf%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87"><span class="nav-text"> WAF 与传统安全设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%A5%E8%87%AAchatgpt%E5%AF%B9%E4%BA%8Ewaf%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87%E7%9A%84%E5%8C%BA%E5%88%AB%E7%9A%84%E5%9B%9E%E7%AD%94"><span class="nav-text"> 来自 ChatGPT 对于 WAF 与传统安全设备的区别的回答：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BF%9D%E6%8A%A4%E5%AF%B9%E8%B1%A1"><span class="nav-text"> 1. 保护对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%B7%A5%E4%BD%9C%E5%B1%82%E9%9D%A2"><span class="nav-text"> 2. 工作层面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%A3%80%E6%B5%8B%E5%92%8C%E9%98%B2%E6%8A%A4%E6%96%B9%E6%B3%95"><span class="nav-text"> 3. 检测和防护方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E9%83%A8%E7%BD%B2%E4%BD%8D%E7%BD%AE"><span class="nav-text"> 4. 部署位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%8A%9F%E8%83%BD%E5%92%8C%E7%94%A8%E9%80%94"><span class="nav-text"> 5. 功能和用途</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E5%85%B7%E4%BD%93%E9%98%B2%E6%8A%A4%E5%9C%BA%E6%99%AF"><span class="nav-text"> 6. 具体防护场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E4%BC%98%E5%8A%BF%E5%92%8C%E5%8A%A3%E5%8A%BF"><span class="nav-text"> 7. 优势和劣势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#waf%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-text"> WAF 的工作原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%B5%81%E9%87%8F%E8%BF%87%E6%BB%A4"><span class="nav-text"> 1. 流量过滤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%AD%BE%E5%90%8D%E6%A3%80%E6%B5%8B"><span class="nav-text"> 2. 签名检测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90"><span class="nav-text"> 3. 行为分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E8%A7%84%E5%88%99%E5%BC%95%E6%93%8E"><span class="nav-text"> 4. 规则引擎</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%E7%AE%A1%E7%90%86"><span class="nav-text"> 5. 安全策略管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%BC%8F"><span class="nav-text"> 6. 学习模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E6%97%A5%E5%BF%97%E8%AE%B0%E5%BD%95%E4%B8%8E%E5%AE%A1%E8%AE%A1"><span class="nav-text"> 7. 日志记录与审计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E9%9B%86%E6%88%90%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8C%96"><span class="nav-text"> 8. 集成与自动化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#waf%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="nav-text"> WAF 的工作流程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89waf"><span class="nav-text"> 简单的自定义 WAF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#waf-bypass"><span class="nav-text"> WAF Bypass</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B6%85%E8%BF%87waf%E9%85%8D%E9%A2%9D%E7%BB%95%E8%BF%87"><span class="nav-text"> 超过 WAF 配额绕过</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%BC%82%E5%B8%B8%E6%95%B0%E6%8D%AE%E5%8C%85"><span class="nav-text"> 构造异常数据包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%95%E8%BF%87%E5%8C%B9%E9%85%8D"><span class="nav-text"> 绕过匹配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#http-%E5%8F%82%E6%95%B0%E6%B1%A1%E6%9F%93"><span class="nav-text"> http 参数污染</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E7%95%B8%E5%BD%A2%E8%AF%B7%E6%B1%82%E5%8C%85"><span class="nav-text"> 构造畸形请求包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BD%E5%90%8D%E5%8D%95bypass"><span class="nav-text"> 白名单 Bypass</span></a></li></ol></li></ol></li></ol>
 
     </div>
 </div>
