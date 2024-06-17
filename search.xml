@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>R3CTF WP</title>
+      <link href="/2024/06/17/R3CTF-WP/"/>
+      <url>/2024/06/17/R3CTF-WP/</url>
+      
+        <content type="html"><![CDATA[<h1 id="r3ctf-部分解题"><a class="markdownIt-Anchor" href="#r3ctf-部分解题">#</a> R3CTF 部分解题</h1><h2 id="misc"><a class="markdownIt-Anchor" href="#misc">#</a> misc</h2><h3 id="blizzard-cn-restarts"><a class="markdownIt-Anchor" href="#blizzard-cn-restarts">#</a> Blizzard CN Restarts</h3><p>魔兽的地图，借助浏览器搜索编辑器</p><p>MPQ master 打开.w3x 文件</p><p><img lazyload src="/images/loading.svg" data-src="https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406172123465.png" alt="3b128d1c95210ccec1d8ab46b9bb676"></p><p>打开.wts 文件</p><p><img lazyload src="/images/loading.svg" data-src="https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406172124261.png" alt="a16774372f0546f4baee3676aabe154"></p><p><code>r3ctf&#123;Elune_be_with_you&#125;</code></p><p>还有很多其他的解题方式，类似题目甚至可以下载游戏，玩通关就可以得到 flag（本题同样适用）</p><h3 id="transit"><a class="markdownIt-Anchor" href="#transit">#</a> Transit</h3><p>通过接触⽹编号锁定杭州⼗九号线，在社交媒体上搜⼀搜图⽚发现是知⾏路站</p><p hangzhou_zhixing_road_station>R3CTF</p><p><img lazyload src="/images/loading.svg" data-src="https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406172152992.png" alt="image-20240617215211528"></p><h2 id="forensics"><a class="markdownIt-Anchor" href="#forensics">#</a> Forensics</h2><h3 id="tpa-02-"><a class="markdownIt-Anchor" href="#tpa-02-">#</a> TPA 02 - 📱</h3><p>流量分析：</p><p><img lazyload src="/images/loading.svg" data-src="https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406172152387.png" alt="ff8460f143f42b0112b7e69af493cc8"></p><p>取证：</p><p>查阅资料</p><p>通话记录保存位置：data/data/com.android.providers.contacts 目录下的 contacts2.db 数据库文件中的 call 表</p><p><img lazyload src="/images/loading.svg" data-src="https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406172154344.png" alt="b4b4cced9b953362b7c38a2d7b7f994"></p><p>没有，</p><p>查找同级目录下的短信</p><p><img lazyload src="/images/loading.svg" data-src="https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406172204482.png" alt="cc4f53b069672d1b768fa05ed5cafa2"></p><p><code>r3ctf&#123;15555215558_l0v3_aNd_peace&#125;</code></p><h3 id="tpa-03-failed"><a class="markdownIt-Anchor" href="#tpa-03-failed">#</a> TPA 03 - 💻 |  Failed</h3><p><img lazyload src="/images/loading.svg" data-src="https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406172205944.png" alt="e378ad7088952c95f6fb111c5cc0d90"></p><p>FTK 人肉遍历发现一个可疑数据库</p><p>sqlitespy 打开</p><p><img lazyload src="/images/loading.svg" data-src="https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406172205616.png" alt="8ab73acb7aa16f48dc84e51fbb83ff4"></p><p>-----BEGIN PGP MESSAGE-----</p><p>hF4DQOZFkOnTo78SAQdAaOkhX64uECdRxqrvFjUAgGkefY/lVoFp2rnn7I9lKwcw</p><p>5LN5bO2Y0PDbp8vkHMIWh4HAgERjvBkdBATFW3pFIZWB7JjNxJd0+vO0ENVUV8XG</p><p>1MAhAQkCEGBAK0C+LBjxWsPdHPKhFyNzJPC/tDGAbTB5sB8bb/VLmToqPIbRfEli</p><p>Xhf6uZ7CDWMkyVWQQKwoyUIprDBUguKx4/smci99rLKbVeStKK/7j5ZyJAHc4lqK</p><p>dhxAHTurzQsgR+yhDOVCiA/vIkfMBxFb7rwBXPNgJbv5lFMuqFbIjR4Btw3BbY90</p><p>1fG4SF69fljKrW3KdM1zyLWODxio682rCxc4OjViKaEZpE7680WApOhDGmIPy4SP</p><p>zJU+s6U9LMvNIgGCJAE7SWrexssYhsqx4cuVK0R/VVck4pgy</p><p>=YxnN</p><p>-----END PGP MESSAGE-----</p><p>pgp 在线解密：<a class="link" href="https://www.codref.org/tools/pgp/">https://www.codref.org/tools/pgp/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p><img lazyload src="/images/loading.svg" data-src="https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406172206737.png" alt="19d300eb9be7d89781af73aa77869a5"></p><p>需要 key</p><p><img lazyload src="/images/loading.svg" data-src="https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406172207462.png" alt="246e615c2681bad1e1e4e79a3ce91b8"></p><p>并没有啥东西，熬夜找到三点依然无果，Give up😭</p><p>暂时没找到其他人的 wp 有此题的解</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>WAF</title>
       <link href="/2024/06/07/WAF/"/>
       <url>/2024/06/07/WAF/</url>

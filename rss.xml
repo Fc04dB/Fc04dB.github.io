@@ -5,8 +5,62 @@
         <link>http://example.com</link>
         <description></description>
         <language>en</language>
-        <pubDate>Fri, 07 Jun 2024 00:12:45 +0800</pubDate>
-        <lastBuildDate>Fri, 07 Jun 2024 00:12:45 +0800</lastBuildDate>
+        <pubDate>Mon, 17 Jun 2024 21:18:09 +0800</pubDate>
+        <lastBuildDate>Mon, 17 Jun 2024 21:18:09 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">http://example.com/2024/06/17/R3CTF-WP/</guid>
+            <title>R3CTF WP</title>
+            <link>http://example.com/2024/06/17/R3CTF-WP/</link>
+            <pubDate>Mon, 17 Jun 2024 21:18:09 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;r3ctf-部分解题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#r3ctf-部分解题&#34;&gt;#&lt;/a&gt; R3CTF 部分解题&lt;/h1&gt;
+&lt;h2 id=&#34;misc&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#misc&#34;&gt;#&lt;/a&gt; misc&lt;/h2&gt;
+&lt;h3 id=&#34;blizzard-cn-restarts&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#blizzard-cn-restarts&#34;&gt;#&lt;/a&gt; Blizzard CN Restarts&lt;/h3&gt;
+&lt;p&gt;魔兽的地图，借助浏览器搜索编辑器&lt;/p&gt;
+&lt;p&gt;MPQ master 打开.w3x 文件&lt;/p&gt;
+&lt;p&gt;&lt;img lazyload src=&#34;/images/loading.svg&#34; data-src=&#34;https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406172123465.png&#34; alt=&#34;3b128d1c95210ccec1d8ab46b9bb676&#34;&gt;&lt;/p&gt;
+&lt;p&gt;打开.wts 文件&lt;/p&gt;
+&lt;p&gt;&lt;img lazyload src=&#34;/images/loading.svg&#34; data-src=&#34;https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406172124261.png&#34; alt=&#34;a16774372f0546f4baee3676aabe154&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;r3ctf&amp;#123;Elune_be_with_you&amp;#125;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;还有很多其他的解题方式，类似题目甚至可以下载游戏，玩通关就可以得到 flag（本题同样适用）&lt;/p&gt;
+&lt;h3 id=&#34;transit&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#transit&#34;&gt;#&lt;/a&gt; Transit&lt;/h3&gt;
+&lt;p&gt;通过接触⽹编号锁定杭州⼗九号线，在社交媒体上搜⼀搜图⽚发现是知⾏路站&lt;/p&gt;
+&lt;p hangzhou_zhixing_road_station&gt;R3CTF&lt;/p&gt;
+&lt;p&gt;&lt;img lazyload src=&#34;/images/loading.svg&#34; data-src=&#34;https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406172152992.png&#34; alt=&#34;image-20240617215211528&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;forensics&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#forensics&#34;&gt;#&lt;/a&gt; Forensics&lt;/h2&gt;
+&lt;h3 id=&#34;tpa-02-&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#tpa-02-&#34;&gt;#&lt;/a&gt; TPA 02 - 📱&lt;/h3&gt;
+&lt;p&gt;流量分析：&lt;/p&gt;
+&lt;p&gt;&lt;img lazyload src=&#34;/images/loading.svg&#34; data-src=&#34;https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406172152387.png&#34; alt=&#34;ff8460f143f42b0112b7e69af493cc8&#34;&gt;&lt;/p&gt;
+&lt;p&gt;取证：&lt;/p&gt;
+&lt;p&gt;查阅资料&lt;/p&gt;
+&lt;p&gt;通话记录保存位置：data/data/com.android.providers.contacts 目录下的 contacts2.db 数据库文件中的 call 表&lt;/p&gt;
+&lt;p&gt;&lt;img lazyload src=&#34;/images/loading.svg&#34; data-src=&#34;https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406172154344.png&#34; alt=&#34;b4b4cced9b953362b7c38a2d7b7f994&#34;&gt;&lt;/p&gt;
+&lt;p&gt;没有，&lt;/p&gt;
+&lt;p&gt;查找同级目录下的短信&lt;/p&gt;
+&lt;p&gt;&lt;img lazyload src=&#34;/images/loading.svg&#34; data-src=&#34;https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406172204482.png&#34; alt=&#34;cc4f53b069672d1b768fa05ed5cafa2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;r3ctf&amp;#123;15555215558_l0v3_aNd_peace&amp;#125;&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;tpa-03-failed&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#tpa-03-failed&#34;&gt;#&lt;/a&gt; TPA 03 - 💻 |  Failed&lt;/h3&gt;
+&lt;p&gt;&lt;img lazyload src=&#34;/images/loading.svg&#34; data-src=&#34;https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406172205944.png&#34; alt=&#34;e378ad7088952c95f6fb111c5cc0d90&#34;&gt;&lt;/p&gt;
+&lt;p&gt;FTK 人肉遍历发现一个可疑数据库&lt;/p&gt;
+&lt;p&gt;sqlitespy 打开&lt;/p&gt;
+&lt;p&gt;&lt;img lazyload src=&#34;/images/loading.svg&#34; data-src=&#34;https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406172205616.png&#34; alt=&#34;8ab73acb7aa16f48dc84e51fbb83ff4&#34;&gt;&lt;/p&gt;
+&lt;p&gt;-----BEGIN PGP MESSAGE-----&lt;/p&gt;
+&lt;p&gt;hF4DQOZFkOnTo78SAQdAaOkhX64uECdRxqrvFjUAgGkefY/lVoFp2rnn7I9lKwcw&lt;/p&gt;
+&lt;p&gt;5LN5bO2Y0PDbp8vkHMIWh4HAgERjvBkdBATFW3pFIZWB7JjNxJd0+vO0ENVUV8XG&lt;/p&gt;
+&lt;p&gt;1MAhAQkCEGBAK0C+LBjxWsPdHPKhFyNzJPC/tDGAbTB5sB8bb/VLmToqPIbRfEli&lt;/p&gt;
+&lt;p&gt;Xhf6uZ7CDWMkyVWQQKwoyUIprDBUguKx4/smci99rLKbVeStKK/7j5ZyJAHc4lqK&lt;/p&gt;
+&lt;p&gt;dhxAHTurzQsgR+yhDOVCiA/vIkfMBxFb7rwBXPNgJbv5lFMuqFbIjR4Btw3BbY90&lt;/p&gt;
+&lt;p&gt;1fG4SF69fljKrW3KdM1zyLWODxio682rCxc4OjViKaEZpE7680WApOhDGmIPy4SP&lt;/p&gt;
+&lt;p&gt;zJU+s6U9LMvNIgGCJAE7SWrexssYhsqx4cuVK0R/VVck4pgy&lt;/p&gt;
+&lt;p&gt;=YxnN&lt;/p&gt;
+&lt;p&gt;-----END PGP MESSAGE-----&lt;/p&gt;
+&lt;p&gt;pgp 在线解密：&lt;a class=&#34;link&#34; href=&#34;https://www.codref.org/tools/pgp/&#34;&gt;https://www.codref.org/tools/pgp/ &lt;i class=&#34;fa-regular fa-arrow-up-right-from-square fa-sm&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img lazyload src=&#34;/images/loading.svg&#34; data-src=&#34;https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406172206737.png&#34; alt=&#34;19d300eb9be7d89781af73aa77869a5&#34;&gt;&lt;/p&gt;
+&lt;p&gt;需要 key&lt;/p&gt;
+&lt;p&gt;&lt;img lazyload src=&#34;/images/loading.svg&#34; data-src=&#34;https://fc04db.oss-cn-hangzhou.aliyuncs.com/image/202406172207462.png&#34; alt=&#34;246e615c2681bad1e1e4e79a3ce91b8&#34;&gt;&lt;/p&gt;
+&lt;p&gt;并没有啥东西，熬夜找到三点依然无果，Give up😭&lt;/p&gt;
+&lt;p&gt;暂时没找到其他人的 wp 有此题的解&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2024/06/07/WAF/</guid>
             <title>WAF</title>
